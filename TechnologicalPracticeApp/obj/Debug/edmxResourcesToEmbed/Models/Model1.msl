@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Model1StoreContainer" CdmEntityContainer="Model1Container">
+    <EntitySetMapping Name="EcolabelSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Ecolabel)">
+        <MappingFragment StoreEntitySet="EcolabelSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CompanyID" ColumnName="CompanyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Company)">
+        <MappingFragment StoreEntitySet="CompanySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CountrySet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Country)">
+        <MappingFragment StoreEntitySet="CountrySet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Country_EcolabelSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Country_Ecolabel)">
+        <MappingFragment StoreEntitySet="Country_EcolabelSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CountryID" ColumnName="CountryID" />
+          <ScalarProperty Name="EcolabelID" ColumnName="EcolabelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EcoTypeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.EcoType)">
+        <MappingFragment StoreEntitySet="EcoTypeSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EcoType_EcolabelSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.EcoType_Ecolabel)">
+        <MappingFragment StoreEntitySet="EcoType_EcolabelSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EcoTypeID" ColumnName="EcoTypeID" />
+          <ScalarProperty Name="EcolabelID" ColumnName="EcolabelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DemandSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Demand)">
+        <MappingFragment StoreEntitySet="DemandSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Rule" ColumnName="Rule" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Demand_EcolabelSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Demand_Ecolabel)">
+        <MappingFragment StoreEntitySet="Demand_EcolabelSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="EcolabelID" ColumnName="EcolabelID" />
+          <ScalarProperty Name="DemandID" ColumnName="DemandID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonalCabinetSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.PersonalCabinet)">
+        <MappingFragment StoreEntitySet="PersonalCabinetSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Mark" ColumnName="Mark" />
+          <ScalarProperty Name="EcolabelID" ColumnName="EcolabelID" />
+          <ScalarProperty Name="PersonID" ColumnName="PersonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PersonSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.Person)">
+        <MappingFragment StoreEntitySet="PersonSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="FatherName" ColumnName="FatherName" />
+          <ScalarProperty Name="PhoneNumber" ColumnName="PhoneNumber" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="AccessLevelID" ColumnName="AccessLevelID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AccessLevelSet">
+      <EntityTypeMapping TypeName="IsTypeOf(Model1.AccessLevel)">
+        <MappingFragment StoreEntitySet="AccessLevelSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

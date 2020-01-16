@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "813025",
+    "ThreadId": "349337",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>Apologies if this is more my lack of css knowledge but I've create a custom css class to control the font-size and assigned the class to the control using DropDownCheckBoxes.Style.SelectBoxCssClass and DropDownBoxCssClass respectively.</p>\r\n<p>I've i look at the rendered source I can see the standard class is placed after my custom one and therefore seems to override my font-size with it's own.</p>\r\n<p>Could someone give me some advice on how I should apply styling to the control ?</p>\r\n<p>Regards</p>\r\n<p>John</p>\r\n",
+    "PostedDate": "2012-03-20T07:38:14.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "838376",
+    "ThreadId": "349337",
+    "Html": "<p>Hi!</p>\r\n<p>I have similar question.</p>\r\n<p>&nbsp;</p>\r\n<p>How change font color of SelectBoxCaption &nbsp;(<span>DropDownCheckBoxes.</span>Texts.SelectBoxCaption)?</p>\r\n<p>&nbsp;</p>\r\n<p>I tried by&nbsp;<span>DropDownCheckBoxes.Style.SelectBoxCssClass, but it did not worked.</span></p>\r\n<p>Any small code sample?&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Best regards from Poland</p>\r\n<p>Grzegorz Pawluch</p>",
+    "PostedDate": "2012-05-19T03:37:32.847-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

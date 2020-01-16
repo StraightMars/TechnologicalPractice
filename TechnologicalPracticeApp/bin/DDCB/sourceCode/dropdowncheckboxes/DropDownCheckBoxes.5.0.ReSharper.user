@@ -1,0 +1,119 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="ScriptManager`0" priority="0" />
+      <Item value="private" priority="0" />
+      <Item value="bool" priority="0" />
+      <Item value="return" priority="1" />
+      <Item value="initializeScript" priority="0" />
+      <Item value="DefaultValue" priority="0" />
+      <Item value="as" priority="0" />
+      <Item value="CheckBoxList`0" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="public" priority="0" />
+      <Item value="new" priority="0" />
+      <Item value="string" priority="0" />
+      <Item value="StackOverflowException`0" priority="0" />
+      <Item value="Obsolete" priority="0" />
+      <Item value="checkBoxes1" priority="0" />
+      <Item value="IsPostBack" priority="0" />
+      <Item value="false" priority="0" />
+      <Item value="foreach" priority="0" />
+      <Item value="ListItem`0" priority="0" />
+      <Item value="item" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.Page">
+      <Item value="IsPostBack" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.StateBag">
+      <Item value="IsItemDirty`0" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Saplin.Controls.DropDownStyle">
+      <Item value="SelectBoxCssClass" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Saplin.Controls.DropDownCheckBoxes">
+      <Item value="Text" priority="0" />
+      <Item value="CellPadding" priority="0" />
+      <Item value="Visible" priority="0" />
+      <Item value="Items" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Web.UI.WebControls.ListItem">
+      <Item value="Selected" priority="1" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/d:Styles/f:CustomDDStyles.css" caret="496" fromTop="23" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx.designer.cs" caret="5661" fromTop="12" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:StateManagedComplexProperty.cs" caret="2026" fromTop="25" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownStyle.cs" caret="987" fromTop="33" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:ExtendedRequiredFieldValidator.cs" caret="214" fromTop="7" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:ToDo.txt" caret="0" fromTop="0" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/d:Properties/f:AssemblyInfo.cs" caret="1519" fromTop="37" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/d:EmbeddedResources/f:jquery-1.6.1.min.js" caret="69" fromTop="3" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownTexts.cs" caret="2001" fromTop="33" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/d:EmbeddedResources/f:DefaultStyles.css" caret="0" fromTop="0" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Default2.aspx" caret="4091" fromTop="28" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Default2.aspx.cs" caret="701" fromTop="19" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx.cs" caret="2278" fromTop="18" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Default.aspx.cs" caret="2127" fromTop="18" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Web.config" caret="191" fromTop="7" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/d:EmbeddedResources/f:DropDownScript.js" caret="1794" fromTop="34" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/d:EmbeddedResources/f:DropDownScript.min.js" caret="1199" fromTop="3" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx" caret="2644" fromTop="34" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Default.aspx" caret="2727" fromTop="42" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownCheckBoxes.cs" caret="1971" fromTop="30" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/d:EmbeddedResources/f:DropDownScript.js" caret="5793" fromTop="24" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/d:EmbeddedResources/f:DropDownScript.js" caret="5997" fromTop="30" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/d:EmbeddedResources/f:DropDownScript.min.js" caret="170" fromTop="0" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownTexts.cs" caret="234" fromTop="8" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownTexts.cs" caret="625" fromTop="23" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownTexts.cs" caret="1091" fromTop="32" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownTexts.cs" caret="1536" fromTop="32" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownTexts.cs" caret="2001" fromTop="33" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Default2.aspx.cs" caret="662" fromTop="6" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Default2.aspx.cs" caret="663" fromTop="16" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx" caret="5118" fromTop="12" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx" caret="883" fromTop="12" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx" caret="6753" fromTop="24" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx" caret="6393" fromTop="24" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx.cs" caret="2274" fromTop="49" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx" caret="1437" fromTop="26" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx" caret="5663" fromTop="42" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx.cs" caret="2492" fromTop="40" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Default.aspx.cs" caret="1952" fromTop="40" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Default.aspx.cs" caret="2184" fromTop="46" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Default.aspx" caret="4299" fromTop="42" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/d:EmbeddedResources/f:DropDownScript.js" caret="1794" fromTop="34" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownCheckBoxes.cs" caret="1175" fromTop="23" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/d:EmbeddedResources/f:DropDownScript.min.js" caret="1199" fromTop="3" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:DefaultUpdatePanel.aspx" caret="2661" fromTop="34" />
+      <File id="98248F69-4786-4C48-9D96-5DD724EDCAC2/f:Default.aspx" caret="2727" fromTop="42" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownCheckBoxes.cs" caret="2966" fromTop="21" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownCheckBoxes.cs" caret="2585" fromTop="49" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownCheckBoxes.cs" caret="2195" fromTop="33" />
+      <File id="DC5FD4C5-70C8-4EC1-A9EA-B0A3FB7AE1D3/f:DropDownCheckBoxes.cs" caret="1971" fromTop="30" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

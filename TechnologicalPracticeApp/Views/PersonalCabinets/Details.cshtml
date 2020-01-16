@@ -1,0 +1,42 @@
+﻿@model TechnologicalPracticeApp.Models.PersonalCabinet
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PersonalCabinet</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ecolabel.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ecolabel.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Person.Login)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Person.Login)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mark)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mark)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

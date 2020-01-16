@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "910585",
+    "ThreadId": "395024",
+    "Html": "\r\n<p>I have the DDCB datasource set against a query from my database. Assuming the datasource is a list of artists this is how i would like to display it in this control</p>\r\n<p>Select All<br>\r\nMichael Jackson<br>\r\n<span style=\"white-space:pre\"></span>Off the wall</p>\r\n<p><span style=\"white-space:pre\"></span>Thriller<br>\r\n<span style=\"white-space:pre\"></span>Bad<br>\r\n<span style=\"white-space:pre\"></span>Dangerous<br>\r\n<span style=\"white-space:pre\"></span>History<br>\r\nEminem<br>\r\n<span style=\"white-space:pre\"></span>Slim Shady<br>\r\n<span style=\"white-space:pre\"></span>Curtain Call<br>\r\n<span style=\"white-space:pre\"></span>The Marshall Mathers<span style=\"white-space:pre\">\r\n<br>\r\n</span>....</p>\r\n<p>So the user should be able to&nbsp;<span style=\"white-space:pre\">&nbsp;</span>Select all to select every artist and album, or select an artist and only their album or even select two or more artists and it would select their albums. Is this possible? If\r\n so any examples?</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2012-09-10T12:32:16.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

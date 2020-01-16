@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\r\nI am using the control on a page with the AjaxControlToolkit 3.5 (ToolkitScriptManager) and am getting the above error from the following script code (which appears to result in the dropdown portion of the control not working).\r\n\r\nDropDownScript.prototype.init = function () { var a = this; if (typeof Sys != \"undefined\") { Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function (c, b) { a.initEvents(); }); }\r\n\r\nWhile I would still like a solution for getting the DropDownCheckBox control working with a ToolkitStriptManager,  I might point out that the above codes representation invarient gives the rule  \"PageRequestManager must not be null\"  because it has the dependency  .getInstance() that requires a valid object reference.    Since it [PageRequestManager] appears to be null in some cases (and is thus creating an exception to the rule), one might want to add some exception handling.",
+    "LastUpdatedDate": "2011-09-29T20:12:17.743-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2011-09-29T20:12:17.743-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "PageRequestManager: object is null or undefined",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 5
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

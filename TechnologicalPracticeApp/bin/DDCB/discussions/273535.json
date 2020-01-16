@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "675540",
+    "ThreadId": "273535",
+    "Html": "\r\n<p>Thanks for creating this control. &nbsp;It's the only one that seems to work correctly in a sharepoint environment. &nbsp;How can I expose this so I can manipulate it via javascript? like add values on the javascript side? hide and unhide? &nbsp;Not sure\r\n if I have to do some special setup first...thanks.</p>\r\n",
+    "PostedDate": "2011-09-22T14:40:08.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "675773",
+    "ThreadId": "273535",
+    "Html": "<p>The 'behavior' object is created client-side for each control when the page loads. It manages the control behavior.</p>\r\n<p>The object can be accessed as a global variable, e.g.</p>\r\n<p>window.&lt;%= dropDownCheckBoxes.ClientID %&gt;.selectAll().</p>\r\n<p>There're such functions&nbsp; as selectAll(), deselectAll(), show(), hide(), clikcOk(), clickCancel() available for the behavior object. They cover functionality of the control&nbsp; and where not tested as separate API but should work fine is used separately . You may find those functions in the 'DropDownScript.js' file if you open the source code solution.</p>",
+    "PostedDate": "2011-09-23T04:27:35.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "687618",
+    "ThreadId": "273535",
+    "Html": "<p>I am also confused on this it seems to have options to select all or none and do actions against the control but how would to select an item via javascript?</p>\r\n<p>For instance I have 3 items in a list, Person1, Person2, Person3</p>\r\n<p>How would I go about (in JavaScript) to say&nbsp;check Person2.</p>\r\n<p>in drop down lists you could always say document.getElementById(\"ddlNames).value = celText; but I cant seem to figure out how to select a single or multiple items through JS</p>\r\n<p>I've also tried the same with window.&lt;%= dropDownCheckBoxes.ClientID %&gt;</p>\r\n<p>&nbsp;but havnt had any luck....any insight would be great thanks</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-10-21T12:17:49.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "689608",
+    "ThreadId": "273535",
+    "Html": "<p>If you inspect the html source, you should notice that the control uses a bunch of check boxes with an iterative numbering system. &nbsp;ie.. somename_0, somename_1, somename_2</p>\r\n<p>You can use dojo or jquery library to get an instance of the checkbox and iterate with a loop like:</p>\r\n<pre><pre><div style=\"color: black; background-color: white;\"><pre>            <span style=\"color: blue;\">var</span> i=0;     \r\n            <span style=\"color: blue;\">this</span>.checkBox = dojo.byId(<span style=\"color: #a31515;\">\"somename_\"</span> + i); <span style=\"color: green;\">//reference to the checkbox</span>\r\n \r\n            <span style=\"color: blue;\">while</span> (<span style=\"color: blue;\">this</span>.checkBox != <span style=\"color: blue;\">null</span>) {\r\n \t\t\r\n\t\t\r\n\t\t<span style=\"color: blue;\">if</span>(<span style=\"color: blue;\">this</span>.checkBox.nextSibling.innerText==<span style=\"color: #a31515;\">\"Person2\"</span>)\r\n\t\t\t<span style=\"color: blue;\">this</span>.checkBox.checked = <span style=\"color: blue;\">true</span>;\r\n                <span style=\"color: green;\">//I only used the below line to grab the value, but haven't tried to actually set it, </span>\r\n\t\t<span style=\"color: green;\">//but above code assuming should work </span>\r\n                <span style=\"color: green;\">//if (this.checkBox.checked == true)</span>\r\n                <span style=\"color: green;\">//    val += this.checkBox.nextSibling.innerText.split(\"-\")[0] + \",\"; //this gets the selected value</span>\r\n \r\n                i++;\r\n                <span style=\"color: blue;\">this</span>.checkBox = dojo.byId(<span style=\"color: #a31515;\">\"somename_\"</span> + i); <span style=\"color: green;\">//document.getElementById should work too</span>\r\n            }\r\n</pre>\r\n</div>\r\n<br /></pre>\r\n</pre>\r\n<p><span style=\"font-family: Consolas, 'Courier New', Courier, monospace;\"><span style=\"white-space: pre;\">Maybe the author included the built in function to handle this, but I couldn't figure how to use it; this works.  I will fix it when it breaks.</span></span></p>",
+    "PostedDate": "2011-10-26T06:46:59.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "692119",
+    "ThreadId": "273535",
+    "Html": "<p>I tried doing what you said via dojo and via varPerson = document.getElementById(\"somename_0\");&nbsp; however it always comes back \"undefined\" like it cant find it so ti never even gets inside of the while loop.... I also tried replacing somename_ with an actual name in the list but still did not have any luck. any ideas on what I might be doing wrong? Heres is my case statement that I am trying to implament this into... thanks for the help btw</p>\r\n<p>&nbsp;</p>\r\n<pre> case \"DropDownList-Assign\":\r\n                divEmployee = document.getElementById(\"divAssign\");\r\n                document.getElementById(\"ddlNames\").value = celText;\r\n                var i = 0;\r\n                this.checkBox = dojo.byId(\"First LastName_\" + i); //reference to the checkbox\r\n\r\n                while (this.checkBox != null) {\r\n\r\n\r\n                    if (this.checkBox.nextSibling.innerText == \"First LastName\")\r\n                        this.checkBox.checked = true;\r\n                    //I only used the below line to grab the value, but haven't tried to actually set it, \r\n                    //but above code assuming should work \r\n                    //if (this.checkBox.checked == true)\r\n                    //    val += this.checkBox.nextSibling.innerText.split(\"-\")[0] + \",\"; //this gets the selected value\r\n\r\n                    i++;\r\n                    this.checkBox = dojo.byId(\"somename_\" + i); //document.getElementById should work too\r\n                }\r\n\r\n                               var myOldString = notes;\r\n                var myNewString = myOldString;\r\n                myNewString = myNewString.replace(/&nbsp;/g, \"\");\r\n                myNewString = myNewString.replace(\"\", \"\");\r\n                myNewString = myNewString.replace(\"\", \"\");\r\n                myNewString = myNewString.replace(/'/g, \"'\");\r\n                notes = myNewString;\r\n                var temp = new Array();\r\n                var strTemp = \"\";\r\n                temp = notes.split(']');\r\n                for (i = 0; i &lt; (temp.length - 1); i++) {\r\n                    temp[i] = temp[i].replace(\"[\", \"\");\r\n                    strTemp = strTemp + temp[i] + \"&lt;hr&gt;&lt;br&gt;\";\r\n                }\r\n                document.getElementById(\"lblNotes\").innerHTML = strTemp;\r\n\r\n                HideChkDiv();\r\n                HideUploadDiv()\r\n                break;</pre>",
+    "PostedDate": "2011-11-01T06:45:46.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "692140",
+    "ThreadId": "273535",
+    "Html": "<p>actualy after digging into the run-time html source (I thought you were refering to the actual control source) I realized that the somename_ is actualy the name of the control so in my case I would call out ﻿<span style=\"color: blue;\">this</span>.checkBox = dojo.byId(<span style=\"color: #a31515;\">\"cboAssign_\"</span> + i);</p>\r\n<p>&nbsp;</p>\r\n<p>thanks for the help t4nguyen ﻿</p>",
+    "PostedDate": "2011-11-01T07:27:14.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

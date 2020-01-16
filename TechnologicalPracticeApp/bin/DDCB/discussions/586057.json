@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1362543",
+    "ThreadId": "586057",
+    "Html": "I am using ASP.NET in Visual Studio 2010 with .NET 4.0, so I don't know if this works for other things. In regards to the issue of it firing twice I basically remove the event handler after it's use. So what I have essentially is...<br />\n<pre><code>protected void myDropDownCheckBoxes_SelectedIndexChanged(object sender, EventArgs e)\n{\n    myDropDownCheckBoxes.SelectedIndexChanged -= new System.EventHandler(this.myDropDownCheckBoxes_SelectedIndexChanged);\n    //Do other stuff, for me it's looking at the itemcollection and checking which items are &quot;selected&quot; \n}\n</code></pre>\n\nWhy? Just from googling, not my investigate discoveries, the DropDownCheckBoxes control contains two children controls, a dropdownlist control and checkbox controls. Each of these is apparently responsible for firing off the event, hence why there are two. Again, these are other people on the internet saying this and I am still a novice in regards to how ASP.NET does a lot of stuff under the hood.<br />\n<br />\nMy settings for the control are<br />\n<pre><code>&lt;asp:DropDownCheckBoxes ID=&quot;ddcbBlah&quot; runat=&quot;server&quot; UseButtons=&quot;True&quot;     OnSelectedIndexChanged=&quot;ddcbCodeVersion_SelectedIndexChanged&quot; Font-Size=&quot;Larger&quot; UseSelectAllNode=&quot;true&quot; &gt;</code></pre>\n\n",
+    "PostedDate": "2015-03-11T10:24:52.867-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

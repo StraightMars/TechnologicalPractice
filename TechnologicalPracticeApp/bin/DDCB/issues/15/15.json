@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "HI, Thanks for the great help you have done by developing this control. I have a problem with the display of the dropdown when i place it in a Gridview Header. The Dropdown drop width is not going beyond the header width. The checkbox items are displayed in two lines. Attached the image of the issue.\r\nKindly provide a solution. \r\nThank you",
+    "LastUpdatedDate": "2013-07-04T20:43:29.713-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2013-07-04T20:43:29.603-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Dropdown display in grid Header",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 15
+  },
+  "FileAttachments": [
+    {
+      "FileId": 699904,
+      "FileName": "Capture.JPG",
+      "DownloadUrl": ".\\699904"
+    }
+  ],
+  "Comments": []
+}

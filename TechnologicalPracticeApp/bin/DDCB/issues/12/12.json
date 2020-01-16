@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello,\r\nI'm amazed to see the control. It was absolutely same what I was looking for.\r\n\r\nThe control is absolutely working fine. But there's a issue with the script (or something else) it's using.\r\n\r\nI placed a gridview with pagination enabled. When i use the control pagination is not working. But when I remove the control, pagination works perfectly fine.\r\n\r\nI have tried to check the same with Firebug on Firefox. When I click on the pagination links Ajax calls returns data, but the data doesn't get updated on gridview.\r\n\r\nAnother amazing this is that, pagination works perfectly fine when you are going forward, but when you use back it doesn't updates data.\r\n\r\nI repeat the whole thing is working fine, when I remove the control from page. And as soon as I put the control on the page, back pagination stops working.",
+    "LastUpdatedDate": "2013-04-26T05:45:46.97-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2013-04-26T05:45:46.97-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Script Conflict with ASP.NET Gridview",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 12
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,50 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 2,
+    "Custom": null,
+    "Description": "First off, GREAT CONTROL!!! EXACTLY what I was looking for! Well Done! \r\nI must be missing something though, because it fires the SelcetedIndexChanged Event 2 times every time the selections are changed.\r\n\r\nI'm using ASP.NET 4\r\nI have 1 instance of the control on a web form\r\nThe controls' DataSourceID is set to an <asp:SqlDataSource> I have included on the .aspx page\r\nI have written a handler for the SelcetedIndexChanged Event in the code-behind file...but it gets called twice every time the items in the dropdownbox are changed. Any ideas?\r\nThanks in advance!\r\n",
+    "LastUpdatedDate": "2012-12-18T12:32:01.587-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2012-02-08T09:45:10.887-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Why does the control fire the SelcetedIndexChanged event 2 times on postback?",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 7
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "it occurs because first event is fires by CheckBoxList control and the second one comes from DropDownCheckBoxes.\n\nTo prevent it you can override SelectedIndexChanged event and also override OnSelectedIndexChanged method.\n\nsomething like that\npublic new event EventHandler SelectedIndexChanged;\n\nprotected new void OnSelectedIndexChanged(EventArgs e)\n{\n\tvar handler = SelectedIndexChanged;\n\tif (handler != null)\n\t\thandler(this, e);\n}",
+      "PostedDate": "2012-04-04T03:46:37.38-07:00",
+      "Id": 61311
+    },
+    {
+      "Message": "you could put a most illustrative example of how to do it please?",
+      "PostedDate": "2012-12-18T12:32:01.587-08:00",
+      "Id": 84547
+    }
+  ]
+}

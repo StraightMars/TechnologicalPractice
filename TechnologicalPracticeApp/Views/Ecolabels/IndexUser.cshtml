@@ -1,0 +1,57 @@
+﻿@*@model IEnumerable<TechnologicalPracticeApp.Models.Ecolabel>*@
+@using TechnologicalPracticeApp.Models
+@model TechnologicalPracticeApp.Models.FilterModel
+
+@{
+    ViewBag.Title = "IndexUser";
+}
+
+<h2>Экомаркировки</h2>
+
+<form method="get">
+    <div class="form-inline form-group">
+        <label class="control-label">Маркировка: </label>
+        @Html.TextBox("name", Model.Name, htmlAttributes: new { @class = "form-control" })
+        <input type="submit" value="Поиск" class="btn btn-default" />
+    </div>
+</form>
+
+<table class="table">
+    <tr>
+        <th>
+            Название экомаркировки
+        </th>
+        <th>
+            Изображение
+        </th>
+    </tr>
+
+    @foreach (var item in Model.Ecolabels)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        @{
+            if (item.Image != null)
+            {
+                <td class="display-field">
+                    <img src="@Url.Action("ViewPhoto", "Ecolabels", new { id = item.Id })" width="50" height="50" />
+                </td>
+            }
+            else
+            {
+                <td>
+                    Изображение отсутствует.
+                </td>
+            }
+        }
+        
+
+        <td>
+            @Html.ActionLink("Подробнее", "DetailsUser", new { id = item.Id })
+        </td>
+    </tr>
+    }
+
+</table>

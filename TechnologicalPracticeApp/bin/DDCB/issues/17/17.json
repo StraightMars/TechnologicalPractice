@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Great help you have done by developing this control. But your target framework is 3.5 or up.\r\nI'm only using .NET 2.0 .\r\nHow I'm implement this control in .NEt 2.0 ??\r\n\r\nThanks for advance..I will really appreciate for any response.",
+    "LastUpdatedDate": "2014-01-13T19:22:37.027-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2014-01-13T19:22:37.027-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": " Drop Down CheckBoxList control  for .NET 2.0",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 17
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

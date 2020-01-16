@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "How to Handle the Checkbox Change Event.\r\nI add the dll in my project .I want to fire the Event once user select the Checkbox. What the Event we can use,because in the Example its shows on OnSelectedIndexChanged event only its happened.\r\n\r\nSo Kindly give your suggestion.\r\n\r\nBest Regards,\r\nSaravanan K",
+    "LastUpdatedDate": "2013-09-18T03:07:34.95-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2013-09-18T03:07:34.95-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "How to Handle the Checkbox Change Event",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 16
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

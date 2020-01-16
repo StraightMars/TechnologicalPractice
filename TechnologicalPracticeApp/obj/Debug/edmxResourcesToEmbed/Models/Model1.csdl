@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Model1" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="Model1Container" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="EcolabelSet" EntityType="Model1.Ecolabel" />
+    <EntitySet Name="CompanySet" EntityType="Model1.Company" />
+    <EntitySet Name="CountrySet" EntityType="Model1.Country" />
+    <EntitySet Name="Country_EcolabelSet" EntityType="Model1.Country_Ecolabel" />
+    <EntitySet Name="EcoTypeSet" EntityType="Model1.EcoType" />
+    <EntitySet Name="EcoType_EcolabelSet" EntityType="Model1.EcoType_Ecolabel" />
+    <EntitySet Name="DemandSet" EntityType="Model1.Demand" />
+    <EntitySet Name="Demand_EcolabelSet" EntityType="Model1.Demand_Ecolabel" />
+    <EntitySet Name="PersonalCabinetSet" EntityType="Model1.PersonalCabinet" />
+    <EntitySet Name="PersonSet" EntityType="Model1.Person" />
+    <EntitySet Name="AccessLevelSet" EntityType="Model1.AccessLevel" />
+    <AssociationSet Name="CompanyEcolabel" Association="Model1.CompanyEcolabel">
+      <End Role="Company" EntitySet="CompanySet" />
+      <End Role="Ecolabel" EntitySet="EcolabelSet" />
+    </AssociationSet>
+    <AssociationSet Name="EcolabelCountry_Ecolabel" Association="Model1.EcolabelCountry_Ecolabel">
+      <End Role="Ecolabel" EntitySet="EcolabelSet" />
+      <End Role="Country_Ecolabel" EntitySet="Country_EcolabelSet" />
+    </AssociationSet>
+    <AssociationSet Name="EcolabelDemand_Ecolabel" Association="Model1.EcolabelDemand_Ecolabel">
+      <End Role="Ecolabel" EntitySet="EcolabelSet" />
+      <End Role="Demand_Ecolabel" EntitySet="Demand_EcolabelSet" />
+    </AssociationSet>
+    <AssociationSet Name="EcolabelPersonalCabinet" Association="Model1.EcolabelPersonalCabinet">
+      <End Role="Ecolabel" EntitySet="EcolabelSet" />
+      <End Role="PersonalCabinet" EntitySet="PersonalCabinetSet" />
+    </AssociationSet>
+    <AssociationSet Name="EcolabelEcoType_Ecolabel" Association="Model1.EcolabelEcoType_Ecolabel">
+      <End Role="Ecolabel" EntitySet="EcolabelSet" />
+      <End Role="EcoType_Ecolabel" EntitySet="EcoType_EcolabelSet" />
+    </AssociationSet>
+    <AssociationSet Name="CountryCountry_Ecolabel" Association="Model1.CountryCountry_Ecolabel">
+      <End Role="Country" EntitySet="CountrySet" />
+      <End Role="Country_Ecolabel" EntitySet="Country_EcolabelSet" />
+    </AssociationSet>
+    <AssociationSet Name="EcoTypeEcoType_Ecolabel" Association="Model1.EcoTypeEcoType_Ecolabel">
+      <End Role="EcoType" EntitySet="EcoTypeSet" />
+      <End Role="EcoType_Ecolabel" EntitySet="EcoType_EcolabelSet" />
+    </AssociationSet>
+    <AssociationSet Name="DemandDemand_Ecolabel" Association="Model1.DemandDemand_Ecolabel">
+      <End Role="Demand" EntitySet="DemandSet" />
+      <End Role="Demand_Ecolabel" EntitySet="Demand_EcolabelSet" />
+    </AssociationSet>
+    <AssociationSet Name="PersonPersonalCabinet" Association="Model1.PersonPersonalCabinet">
+      <End Role="Person" EntitySet="PersonSet" />
+      <End Role="PersonalCabinet" EntitySet="PersonalCabinetSet" />
+    </AssociationSet>
+    <AssociationSet Name="AccessLevelPerson" Association="Model1.AccessLevelPerson">
+      <End Role="AccessLevel" EntitySet="AccessLevelSet" />
+      <End Role="Person" EntitySet="PersonSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Ecolabel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Image" Type="Binary" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" />
+    <Property Name="CompanyID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Company" Relationship="Model1.CompanyEcolabel" FromRole="Ecolabel" ToRole="Company" />
+    <NavigationProperty Name="Country_Ecolabel" Relationship="Model1.EcolabelCountry_Ecolabel" FromRole="Ecolabel" ToRole="Country_Ecolabel" />
+    <NavigationProperty Name="Demand_Ecolabel" Relationship="Model1.EcolabelDemand_Ecolabel" FromRole="Ecolabel" ToRole="Demand_Ecolabel" />
+    <NavigationProperty Name="PersonalCabinet" Relationship="Model1.EcolabelPersonalCabinet" FromRole="Ecolabel" ToRole="PersonalCabinet" />
+    <NavigationProperty Name="EcoType_Ecolabel" Relationship="Model1.EcolabelEcoType_Ecolabel" FromRole="Ecolabel" ToRole="EcoType_Ecolabel" />
+  </EntityType>
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Address" Type="String" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" />
+    <NavigationProperty Name="Ecolabel" Relationship="Model1.CompanyEcolabel" FromRole="Company" ToRole="Ecolabel" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Country_Ecolabel" Relationship="Model1.CountryCountry_Ecolabel" FromRole="Country" ToRole="Country_Ecolabel" />
+  </EntityType>
+  <EntityType Name="Country_Ecolabel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryID" Type="Int32" Nullable="false" />
+    <Property Name="EcolabelID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ecolabel" Relationship="Model1.EcolabelCountry_Ecolabel" FromRole="Country_Ecolabel" ToRole="Ecolabel" />
+    <NavigationProperty Name="Country" Relationship="Model1.CountryCountry_Ecolabel" FromRole="Country_Ecolabel" ToRole="Country" />
+  </EntityType>
+  <EntityType Name="EcoType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="EcoType_Ecolabel" Relationship="Model1.EcoTypeEcoType_Ecolabel" FromRole="EcoType" ToRole="EcoType_Ecolabel" />
+  </EntityType>
+  <EntityType Name="EcoType_Ecolabel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EcoTypeID" Type="Int32" Nullable="false" />
+    <Property Name="EcolabelID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ecolabel" Relationship="Model1.EcolabelEcoType_Ecolabel" FromRole="EcoType_Ecolabel" ToRole="Ecolabel" />
+    <NavigationProperty Name="EcoType" Relationship="Model1.EcoTypeEcoType_Ecolabel" FromRole="EcoType_Ecolabel" ToRole="EcoType" />
+  </EntityType>
+  <EntityType Name="Demand">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Rule" Type="String" Nullable="false" />
+    <NavigationProperty Name="Demand_Ecolabel" Relationship="Model1.DemandDemand_Ecolabel" FromRole="Demand" ToRole="Demand_Ecolabel" />
+  </EntityType>
+  <EntityType Name="Demand_Ecolabel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EcolabelID" Type="Int32" Nullable="false" />
+    <Property Name="DemandID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ecolabel" Relationship="Model1.EcolabelDemand_Ecolabel" FromRole="Demand_Ecolabel" ToRole="Ecolabel" />
+    <NavigationProperty Name="Demand" Relationship="Model1.DemandDemand_Ecolabel" FromRole="Demand_Ecolabel" ToRole="Demand" />
+  </EntityType>
+  <EntityType Name="PersonalCabinet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Mark" Type="Int32" Nullable="false" />
+    <Property Name="EcolabelID" Type="Int32" Nullable="false" />
+    <Property Name="PersonID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ecolabel" Relationship="Model1.EcolabelPersonalCabinet" FromRole="PersonalCabinet" ToRole="Ecolabel" />
+    <NavigationProperty Name="Person" Relationship="Model1.PersonPersonalCabinet" FromRole="PersonalCabinet" ToRole="Person" />
+  </EntityType>
+  <EntityType Name="Person">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Login" Type="String" Nullable="false" />
+    <Property Name="Password" Type="String" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <Property Name="Surname" Type="String" Nullable="false" />
+    <Property Name="FatherName" Type="String" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" Nullable="false" />
+    <Property Name="EmailAddress" Type="String" Nullable="false" />
+    <Property Name="AccessLevelID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="PersonalCabinet" Relationship="Model1.PersonPersonalCabinet" FromRole="Person" ToRole="PersonalCabinet" />
+    <NavigationProperty Name="AccessLevel" Relationship="Model1.AccessLevelPerson" FromRole="Person" ToRole="AccessLevel" />
+  </EntityType>
+  <EntityType Name="AccessLevel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" Nullable="false" />
+    <NavigationProperty Name="Person" Relationship="Model1.AccessLevelPerson" FromRole="AccessLevel" ToRole="Person" />
+  </EntityType>
+  <Association Name="CompanyEcolabel">
+    <End Type="Model1.Company" Role="Company" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model1.Ecolabel" Role="Ecolabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Company">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ecolabel">
+        <PropertyRef Name="CompanyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EcolabelCountry_Ecolabel">
+    <End Type="Model1.Ecolabel" Role="Ecolabel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model1.Country_Ecolabel" Role="Country_Ecolabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ecolabel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Country_Ecolabel">
+        <PropertyRef Name="EcolabelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EcolabelDemand_Ecolabel">
+    <End Type="Model1.Ecolabel" Role="Ecolabel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model1.Demand_Ecolabel" Role="Demand_Ecolabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ecolabel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Demand_Ecolabel">
+        <PropertyRef Name="EcolabelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EcolabelPersonalCabinet">
+    <End Type="Model1.Ecolabel" Role="Ecolabel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model1.PersonalCabinet" Role="PersonalCabinet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ecolabel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonalCabinet">
+        <PropertyRef Name="EcolabelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EcolabelEcoType_Ecolabel">
+    <End Type="Model1.Ecolabel" Role="Ecolabel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model1.EcoType_Ecolabel" Role="EcoType_Ecolabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ecolabel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EcoType_Ecolabel">
+        <PropertyRef Name="EcolabelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CountryCountry_Ecolabel">
+    <End Type="Model1.Country" Role="Country" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model1.Country_Ecolabel" Role="Country_Ecolabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Country_Ecolabel">
+        <PropertyRef Name="CountryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EcoTypeEcoType_Ecolabel">
+    <End Type="Model1.EcoType" Role="EcoType" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model1.EcoType_Ecolabel" Role="EcoType_Ecolabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="EcoType">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="EcoType_Ecolabel">
+        <PropertyRef Name="EcoTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DemandDemand_Ecolabel">
+    <End Type="Model1.Demand" Role="Demand" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model1.Demand_Ecolabel" Role="Demand_Ecolabel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Demand">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Demand_Ecolabel">
+        <PropertyRef Name="DemandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PersonPersonalCabinet">
+    <End Type="Model1.Person" Role="Person" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model1.PersonalCabinet" Role="PersonalCabinet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Person">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="PersonalCabinet">
+        <PropertyRef Name="PersonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AccessLevelPerson">
+    <End Type="Model1.AccessLevel" Role="AccessLevel" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="Model1.Person" Role="Person" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccessLevel">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Person">
+        <PropertyRef Name="AccessLevelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "941577",
+    "ThreadId": "403171",
+    "Html": "\r\n<p><span>Hey All, I want to check all in the dropdown..do we have any shortcut to do it...I have thousands items in the dropdown...looping is making my page slow...how to automatically make it selected?</span><br>\r\n<br>\r\n<span>foreach (ListItem item in DD.Items)</span><br>\r\n<span>{</span><br>\r\n<span>item.Selected = true;</span><br>\r\n<span>}</span></p>\r\n<p>&nbsp;</p>\r\n<p><span>Please help me, I am using it for the company i am working for...they are asking me to improve the page performance...it is a high priority for me....</span></p>\r\n",
+    "PostedDate": "2012-11-14T06:13:34.25-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1086497",
+    "ThreadId": "403171",
+    "Html": "Hi,<br />\n<br />\nMaybe too late for answering this question, but I've got a solution (i think) for my project few hours ago.<br />\n<br />\nI did it through javascript, investigating the source code of the control, with the following code:<br />\n<br />\n<br />\nfunction dropdownCheckBoxesSelectAll(dropdownID) {<br />\n<pre><code>/* Select all the phyisical checkbox of the control */\nvar i = 0;\nthis.checkBox = document.getElementById(&quot;MainContent_&quot; + dropdownID + &quot;_&quot; + i);\nwhile (this.checkBox != null) {\n    this.checkBox.checked = true;\n    i++;\n    this.checkBox = document.getElementById(&quot;MainContent_&quot; + dropdownID + &quot;_&quot; + i);\n}\n\n/* Select the virtual &quot;SelectAll&quot; checkbox of the control */\n$(&quot;#&quot; + &quot;MainContent_&quot; + dropdownID + &quot;_dv&quot; + &quot; input[type='checkbox']:first&quot;).attr(&quot;checked&quot;, true);</code></pre>\n\n}<br />\n<br />\n<br />\n&quot;MainContent_dropDownID_dv&quot; is the way to access the &quot;div&quot; wich contains the virtual &quot;SelectAll&quot; node. Maybe, the &quot;MainContent&quot; expression is different in each project.<br />\n<br />\nAnd then, in the code behind:<br />\n<blockquote>\nClientScript.RegisterStartupScript(GetType(), &quot;dropdownCheckBoxesSelectAll&quot;, &quot;dropdownCheckBoxesSelectAll('&quot; + dropDownControl.ID + &quot;');&quot;, true);<br />\n</blockquote>\nWhere &quot;dropDownControl&quot; is the variable in the code behind wich identifies the control.<br />\n<br />\nIf someone finds some correction to do in this code, please, do not hesitate to answer this post. Thanks.<br />\n<br />\nRegards.<br />\n",
+    "PostedDate": "2013-08-30T00:00:52.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<TechnologicalPracticeApp.Models.Demand_Ecolabel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Связи Экомаркировка - Правило</h2>
+
+<p>
+    @Html.ActionLink("Добавить новую", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Экомаркировка
+        </th>
+        <th>
+            Правило
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ecolabel.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Demand.Rule)
+            </td>
+            <td>
+                @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("К списку требований", "Index", "Demands")
+</div>
+<div>
+    @Html.ActionLink("К списку маркировок", "IndexAdmin", "Ecolabels")
+</div>

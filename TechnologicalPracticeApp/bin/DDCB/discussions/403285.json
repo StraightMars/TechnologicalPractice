@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "941982",
+    "ThreadId": "403285",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>Currently when we set Enabled=&quot;false&quot; attribute, the drop down list remains enabled and only disable check boxes in drop down. &nbsp;I want to disable the drop down list so that user&nbsp;shouldn't&nbsp;be able to interact with it like other asp.net\r\n controls. Can any one tell me how can i implement this functionality?</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2012-11-14T23:41:27.067-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1082056",
+    "ThreadId": "403285",
+    "Html": "Customize <a href=\"http://www.kettic.com/winforms_ui/dropdown_list.shtml\" rel=\"nofollow\">Drop Down List Control</a> in Windows Forms.<br />\n",
+    "PostedDate": "2013-08-19T02:31:12.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

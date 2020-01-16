@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "839169",
+    "ThreadId": "356618",
+    "Html": "\r\n<p>This control was a great find, thank you for the time/effort into creating and maintaining it.</p>\r\n<p>That said, we have a DropDownCheckBox that has a DataSource set to a column in a DataView. The column is a DateTime (e.g. 2010-09-03 13:29:58). We have tried to format the value displayed in the drop down such that it looks like 03/09/2010 using DropDownCheckBox.DataTextFormatString\r\n = &quot;{0:mm/dd/yyyy}&quot; but it doesn't seem to format the values properly. Any suggestions or are we attempting to format incorrectly?</p>\r\n",
+    "PostedDate": "2012-05-21T18:15:37.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "910973",
+    "ThreadId": "395133",
+    "Html": "\r\n<p>Love the control - has saved me a ton of work.</p>\r\n<p>I'm trying to set a tool tip on the control though - and no matter I put it in the markup or put try to set the value in code - the Tool Tip does not come up when I hover over the control.</p>\r\n<p>Anyone else find this?</p>\r\n",
+    "PostedDate": "2012-09-11T08:05:06.46-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1113074",
+    "ThreadId": "395133",
+    "Html": "If you still looking for solution I can share with you?<br />\n",
+    "PostedDate": "2013-10-28T07:04:50.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1233078",
+    "ThreadId": "395133",
+    "Html": "Hi, anyone can help in setting the tooltip property of the dropdown chekbox.<br />\n",
+    "PostedDate": "2014-04-10T22:41:37.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1233780",
+    "ThreadId": "395133",
+    "Html": "hi, can you pls share the solution..<br />\n",
+    "PostedDate": "2014-04-14T00:33:37.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1233815",
+    "ThreadId": "395133",
+    "Html": "Add these to DropDownCheckBox Class<br />\n<pre><code>protected override void OnSelectedIndexChanged(System.EventArgs e)\n        {\n            base.OnSelectedIndexChanged(e);\n\n            this.Texts.CaptionToolTip = DropDownComcoCaptionToolTip(this);\n            this.Texts.SelectBoxCaption = DropDownComcoCaptionText(this);\n\n            StringBuilder sb = new StringBuilder();\n\n            for (int j = 0; j &lt; this.Items.Count; j++)\n            {\n                if (this.Items[j].Selected == true &amp;&amp; string.IsNullOrEmpty(sb.ToString()))\n                {\n                    sb.Append(string.Format(&quot;{0}&quot;, this.Items[j].Value));\n                }\n                else\n                {\n                    sb.Append(string.Format(&quot;,{0}&quot;, this.Items[j].Value));\n                }\n            }\n\n            SelectedValuesAsString = sb.ToString();\n        }\n\n        private String DropDownComcoCaptionText(TvDropDownCheckBoxes DropDownCombo)\n        {\n            StringBuilder sb = new StringBuilder();\n\n            foreach (ListItem item in DropDownCombo.Items)\n            {\n                if (item.Selected)\n                {\n                    sb.Append(item.Text);\n                    sb.Append(&quot;,&quot;);\n                }\n            }\n\n            int cationLenghth = 9;\n            if (sb.Length &gt; cationLenghth)\n            {\n                sb.Remove(cationLenghth, sb.Length - cationLenghth);\n            }\n\n            if (sb.Length == 0)\n            {\n                return &quot;Please Select..&quot;;\n            }\n            else\n            {\n                sb.Remove(sb.ToString().Length - 1, 1);\n                sb.Append(&quot;..&quot;);\n                return sb.ToString();\n            }\n        }\n\n        private String DropDownComcoCaptionToolTip(TvDropDownCheckBoxes DropDownCombo)\n        {\n            StringBuilder sb = new StringBuilder();\n\n            foreach (ListItem item in DropDownCombo.Items)\n            {\n                if (item.Selected)\n                {\n                    sb.Append(item.Text);\n                    sb.Append(&quot;\\n&quot;);\n                }\n            }\n\n            if (sb.ToString().Length &gt; 0)\n            {\n                sb.Remove(sb.ToString().Length - 1, 1);\n            }\n\n            return sb.ToString();\n        }\n\n        public string SelectedValuesAsString { get; set; }</code></pre>\n\nAdd these to DropDownTexts Class<br />\n<pre><code>[Localizable(true)]\n        [DefaultValue(&quot;&quot;)]\n        [NotifyParentProperty(true)]\n        public string CaptionToolTip\n        {\n            get\n            {\n                return ViewState[&quot;CaptionToolTip&quot;] as string;\n            }\n            set\n            {\n                ViewState[&quot;CaptionToolTip&quot;] = value;\n            }\n        }\n\n [Localizable(true)]\n        [DefaultValue(&quot;Select&quot;)]\n        [NotifyParentProperty(true)]\n        public string SelectBoxCaption\n        {\n            get\n            {\n                return ViewState[&quot;SelectBoxCaption&quot;] as string;\n            }\n            set\n            {\n                ViewState[&quot;SelectBoxCaption&quot;] = value;\n            }\n        }\n\n// add below lines to the constructor\npublic DropDownTexts()\n        {\n            SelectBoxCaption = &quot;Please Select&quot;;\n            CaptionToolTip = &quot;&quot;;\n        }\n</code></pre>\n\nFinally you can use the methods below in your asp.net web form<br />\n<pre><code>private String DropDownComcoCaptionText(TvDropDownCheckBoxes DropDownCombo)\n        {\n            StringBuilder sb = new StringBuilder();\n\n            foreach (ListItem item in DropDownCombo.Items)\n            {\n                if (item.Selected)\n                {\n                    sb.Append(item.Text);\n                    sb.Append(&quot;,&quot;);\n                }\n            }\n\n            int cationLenghth = 9;\n            if (sb.Length &gt; cationLenghth)\n            {\n                sb.Remove(cationLenghth, sb.Length - cationLenghth);\n            }\n\n            if (sb.Length == 0)\n            {\n                return &quot;Please Select..&quot;;\n            }\n            else\n            {\n                sb.Remove(sb.ToString().Length - 1, 1);\n                sb.Append(&quot;..&quot;);\n                return sb.ToString();\n            }\n        }\n\n        private String DropDownComcoCaptionToolTip(TvDropDownCheckBoxes DropDownCombo)\n        {\n            StringBuilder sb = new StringBuilder();\n\n            foreach (ListItem item in DropDownCombo.Items)\n            {\n                if (item.Selected)\n                {\n                    sb.Append(item.Text);\n                    sb.Append(&quot;\\n&quot;);\n                }\n            }\n\n            if (sb.ToString().Length &gt; 0)\n            {\n                sb.Remove(sb.ToString().Length - 1, 1);\n            }\n\n            return sb.ToString();\n        }</code></pre>\n\n",
+    "PostedDate": "2014-04-14T02:23:21.093-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1313652",
+    "ThreadId": "395133",
+    "Html": "dogancakmak, Thank you!  I have been so frustrated trying to get this working.\r<br />\n<br />\nThere was one additional step I had to take to make this work however.\r<br />\n<br />\nIn the DropDownCheckBoxes Class, add the middle section of code below:<br />\n<pre><code>        protected override void Render(System.Web.UI.HtmlTextWriter writer)\n        {\n            //ReseteParentProperties();\n\n            // Add wrapper div\n            writer.AddStyleAttribute(HtmlTextWriterStyle.Display, &quot;inline-block&quot;);\n            writer.AddStyleAttribute(HtmlTextWriterStyle.Position, &quot;relative&quot;);\n            writer.AddAttribute(HtmlTextWriterAttribute.Id, ClientID + selectPstfx);\n            writer.AddAttribute(HtmlTextWriterAttribute.Class, !string.IsNullOrEmpty(Style.SelectBoxCssClass) ? Style.SelectBoxCssClass + &quot; &quot; + selectCssClass : selectCssClass);\n            if (Style.SelectBoxWidth.Value &gt; 0) writer.AddStyleAttribute(HtmlTextWriterStyle.Width, Style.SelectBoxWidth.ToString());\n            writer.RenderBeginTag(HtmlTextWriterTag.Div);\n</code></pre>\n\n<pre><code>           // Add caption\n            if (!string.IsNullOrEmpty(Texts.SelectBoxCaption))\n            {\n                writer.AddAttribute(HtmlTextWriterAttribute.Id, &quot;caption&quot;);\n                writer.AddAttribute(HtmlTextWriterAttribute.Title, Texts.CaptionToolTip);\n                writer.RenderBeginTag(HtmlTextWriterTag.Div);\n                writer.WriteEncodedText(Texts.SelectBoxCaption);\n                writer.RenderEndTag();\n            }</code></pre>\n\n<pre><code>        // Add dropdown div markup\n        writer.AddAttribute(HtmlTextWriterAttribute.Id, ClientID + divPstfx);\n        writer.AddAttribute(HtmlTextWriterAttribute.Class, !string.IsNullOrEmpty(Style.DropDownBoxCssClass) ? Style.DropDownBoxCssClass + &quot; &quot; + dropDownCssClass : dropDownCssClass);\n        writer.AddStyleAttribute(HtmlTextWriterStyle.Display, &quot;none&quot;);\n        writer.AddStyleAttribute(HtmlTextWriterStyle.Position, &quot;absolute&quot;);\n        if (Style.DropDownBoxBoxWidth.Value &gt; 0) writer.AddStyleAttribute(HtmlTextWriterStyle.Width, Style.DropDownBoxBoxWidth.ToString());\n        writer.RenderBeginTag(HtmlTextWriterTag.Div);\n</code></pre>\n\nThanks again!<br />\n",
+    "PostedDate": "2014-10-15T09:01:33.91-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

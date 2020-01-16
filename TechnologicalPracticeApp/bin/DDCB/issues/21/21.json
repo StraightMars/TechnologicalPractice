@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I've been able to create the control on the page just fine.  I can run the app and click on the dropdowncheckbox and click on a single item and I get the following error:\r\n\r\nUnhandled exception at line 1, column 2139 in http://localhost:60375/bundles/MsAjaxJs?v=c42ygB2U07n37m_Sfa8ZbLGVu4Rr2gsBo7MvUEnJeZ81\r\n0x800a01b6 - JavaScript runtime error: Object doesn't support property or method 'apply'\r\n\r\nI'm in Visual Studio 2013 and here is my code:\r\n\r\n<asp:DropDownCheckBoxes ID=\"ddcbPSR\" runat=\"server\" UseSelectAllNode=\"false\">\r\n                    <Style SelectBoxWidth=\"360\" DropDownBoxBoxWidth=\"360\" DropDownBoxBoxHeight=\"80\" />\r\n                    <Texts SelectBoxCaption=\"Select PSR(s)\" />\r\n                    <Items>\r\n                        <asp:ListItem Text=\"Item 1\" Value=\"0\"></asp:ListItem>\r\n                    </Items>\r\n                </asp:DropDownCheckBoxes>\r\n\r\nAnd when I click on Item 1 in the list - I get that error.\r\n\r\n",
+    "LastUpdatedDate": "2015-12-28T13:28:13.607-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2015-12-28T13:28:13.607-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Runtime Error",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 21
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

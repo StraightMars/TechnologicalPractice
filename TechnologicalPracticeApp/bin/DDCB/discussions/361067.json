@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "854158",
+    "ThreadId": "361067",
+    "Html": "\r\n<p>Successfully implemented first control on .NET 4 web page with master. Works fine. Users very happy. Need to add second control, in GridView header. Succcessfully adds to .aspx page, but code-behind refuses to recognize that the control exists. Tried saving\r\n .aspx page; still no luck. Tried building page. Nope, says the control does not exist in the specified context. I'm able to directly address other list boxes in the GridView header, so why is the DropDownCheckBox control (or VS2010) being so recalcitrant about\r\n the second instance of the control?</p>\r\n<p>Did I miss something in the documtation?</p>\r\n<p>Oh yeah, the Style2 tag doesn't work in the package I downloaded. I ended up setting the widths via code-behind for the first control instance. Just thought I'd throw that in in case there's a fix.</p>\r\n",
+    "PostedDate": "2012-06-26T22:36:44.003-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

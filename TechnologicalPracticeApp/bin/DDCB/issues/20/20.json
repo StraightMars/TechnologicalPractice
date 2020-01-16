@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "when I open the dropdowncheckbox and click \"Select all\" it selects all and when I uncheck Select all it unchecks all but when I want to check Select all again, it does not check all the options\r\n\r\n\r\nI Have a DropDownCheckBoxes\r\n```\r\n<asp:DropDownCheckBoxes CssClass=\"FreeTextFilterSelection\" ID=\"cbMarket\" AddJQueryReference=\"false\" UseSelectAllNode=\"True\"\r\n     AutoPostBack=\"true\" DataTextField=\"Text\" runat=\"server\" OnSelectedIndexChanged=\"cbMarket_SelectedIndexChanged\" style=\"height: 19px\" >\r\n     <Texts SelectBoxCaption=\"\" />\r\n</asp:DropDownCheckBoxes>\r\n\r\n```\r\nand SelectedIndexChanged event for it\r\n\r\n\r\n```\r\nprotected void cbMarket_SelectedIndexChanged(object sender, EventArgs e)\r\n        {\r\n            try\r\n            {\r\n                string s = string.Empty;\r\n                string s1 = string.Empty;\r\n                int i = 0;\r\n                foreach (ListItem item in (sender as DropDownCheckBoxes).Items)\r\n                {\r\n                    if (item.Selected)\r\n                    {\r\n                        if (i > 0)\r\n                        {\r\n                            s = s + \" ...\";\r\n                            break;\r\n                        }\r\n                        else\r\n                        {\r\n                            s1 = item.Text;\r\n                            if (string.IsNullOrEmpty(s1))\r\n                                s1 = \"NULL\";\r\n                            s = s + s1;\r\n                        }\r\n                        i++;\r\n                    }\r\n                }\r\n                (sender as DropDownCheckBoxes).Texts.SelectBoxCaption = s;\r\n \r\n            }\r\n            catch (Exception)\r\n            {\r\n \r\n            }\r\n \r\n        }\r\n```\r\n\r\nThanks in advance\r\n",
+    "LastUpdatedDate": "2015-06-11T02:33:18.093-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2015-06-11T02:32:00.78-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Drop-Down-Check-Boxes select un-select malfunction",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 20
+  },
+  "FileAttachments": [
+    {
+      "FileId": 1461631,
+      "FileName": "dropdowncheckboxlist.jpg",
+      "DownloadUrl": ".\\1461631"
+    }
+  ],
+  "Comments": []
+}

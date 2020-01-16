@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1046775",
+    "ThreadId": "444495",
+    "Html": "Thanks to the author for the original code.\r<br />\n<br />\n1) Requirement: Have jQuery 1.7+ or 2.0+ already referenced in your web code (I put mine in head of my Master Page - but you can use a ScriptManager if you like)\r<br />\n<br />\n2) DropDownCheckBoxes.cs - Lines 25 and 149: change the default value for AddJQueryReference to &quot;false&quot;.  This keeps it from spitting out a copy of jQuery 1.6.1 into your website.\r<br />\n<br />\n3) DropDownScript.js - Lines 6 through 12: Remove the &quot;hitch&quot; function altogether.\r<br />\n<br />\n4) DropDownScript.js - multiple lines: Replace &quot;unbind&quot; with &quot;off&quot; -- example:<br />\n<pre><code>div.unbind(&quot;click.chk_dd&quot;);</code></pre>\n\n-becomes-<br />\n<pre><code>div.off(&quot;click.chk_dd&quot;);</code></pre>\n\n5) DropDownScript.js - multiple lines: Replace &quot;hitch&quot; with &quot;on&quot; and &quot;proxy&quot; -- example:<br />\n<pre><code>div.hitch(\n    &quot;click.chk_dd&quot;,\n    this.divClickHandler,\n    this\n);</code></pre>\n\n-becomes-<br />\n<pre><code>div.on(\n    &quot;click.chk_dd&quot;,\n    $.proxy(\n        this.divClickHandler,\n        this\n    )\n);</code></pre>\n\n6) DropDownScript.js - Lines 207 and 211: Replace &quot;attr&quot; with &quot;prop&quot; -- example:<br />\n<pre><code>this.getItems().attr(&quot;checked&quot;, true);</code></pre>\n\n-becomes-<br />\n<pre><code>this.getItems().prop(&quot;checked&quot;, true);</code></pre>\n\n7) Now take all the DropDownScript.js code and run it through a minimizer (I've been using <a href=\"http://www.example.com\" rel=\"nofollow\">http://jscompress.com/</a>) and save the results into DropDownScript.min.js (which is the actual script file spit out to your website)\r<br />\n<br />\nDone.\r<br />\n<br />\nIf you want to take the time to remove the jQuery embedded reference, that's fine - but this was the fewest changes needed.\r<br />\n<br />\nPlease send me a thanks if this helped you out.<br />\n",
+    "PostedDate": "2013-05-21T15:41:53.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1477948",
+    "ThreadId": "444495",
+    "Html": "Many thanks for these amendments - exactly what I was looking for!\r<br />\n<br />\nI will add one more here:<br />\n<ul>\n<li><strong>Assumption</strong>: The control is AutoPostBack=&quot;true&quot;</li>\n<li><strong>Problem</strong>: When user selects or deselects check boxes and then clicks anywhere outside the control, a post back (OnSelectedIndexChanged) is automatically triggered. However when, instead, the user clicks the control box (the upper part of the control), or the down-arrow area, the post back is not generated.</li>\n<li>\n<strong>Solution</strong>: Locate the following piece of code (around line 68):<br />\n</li>\n</ul>\n<pre><code>    this.selectBoxClickHandler = function (e) {\n        if (this.visible) this.hide();\n        else {\n            this.show();\n            this.preventHide = true;\n        }\n    }</code></pre>\n\nchange it to:<br />\n<pre><code>    this.selectBoxClickHandler = function (e) {\n        if (this.visible) {\n            this.hide();\n            this.doPostBack(); \n        }\n        else {\n            this.show();\n            this.preventHide = true;\n        }\n    }</code></pre>\n\nThanks, hope you will find it useful!<br />\n",
+    "PostedDate": "2016-07-02T11:38:49.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

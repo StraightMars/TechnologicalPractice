@@ -1,0 +1,50 @@
+﻿@model TechnologicalPracticeApp.Models.Ecolabel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Удаление экомаркировки</h2>
+
+<h3>Вы действительно хотите удалить выбранную экомаркировку?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Название экомаркировки
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Изображение
+        </dt>
+
+        @{
+            if (Model.Image != null)
+            {
+                <dd class="display-field col-md-offset-5">
+                    <img src="@Url.Action("ViewPhoto", "Ecolabels", new { id = Model.Id})" width="100" height="100" />
+                </dd>
+            }
+            else
+            {
+                <dd class="col-md-offset-5">Изображение отсутствует.</dd>
+            }
+        }
+
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn-link" /> |
+            @Html.ActionLink("Вернуться к списку экомаркировок", "IndexAdmin")
+        </div>
+    }
+</div>

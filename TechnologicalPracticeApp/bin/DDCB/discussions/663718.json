@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1497946",
+    "ThreadId": "663718",
+    "Html": "I use the DropDownCheckBoxes for populate this List Item:\r<br />\n<img src=\"https://i.stack.imgur.com/rW6cz.png\" alt=\"Image\" />\r<br />\n<br />\nFrom this <strong>List Item</strong> you can select recipients of an email message, but only the first selected value name is the <strong>&quot;To&quot;</strong> address destination.\r<br />\n<br />\nThe following selected value name are <strong>&quot;CC&quot;</strong> address destination.\r<br />\n<br />\nMy problem if select <em>foo</em> for <strong>&quot;To&quot;</strong> and <em>foo1</em> for <strong>&quot;CC&quot;</strong> :\r<br />\n<img src=\"https://i.stack.imgur.com/l7SDa.png\" alt=\"Image\" />\r<br />\n<br />\nThe output is correct :\r<br />\n<img src=\"https://i.stack.imgur.com/90HMV.png\" alt=\"Image\" />\r<br />\n<br />\nBut if try select <em>foo1</em> for <strong>&quot;To&quot;</strong> and <em>foo</em> for <strong>&quot;CC&quot;</strong> I need this output:<br />\n<pre><code>    TO : foo1@email.com\n    CC : foo@email.com </code></pre>\n\nInstead of :\r<br />\n<img src=\"https://i.stack.imgur.com/90HMV.png\" alt=\"Image\" />\r<br />\n<br />\nHow to do resolve this ?\r<br />\n<br />\nThank you in advance for any help, really appreciated.<br />\n<pre><code>    string sEmail = string.Empty;\n    foreach (ListItem item in myListItem.Items)\n    {\n        if (item.Selected)\n        {\n            sEmail += item.Value + &quot;; &quot;;\n        }\n    }</code></pre>\n\n",
+    "PostedDate": "2017-09-06T03:36:09.04-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

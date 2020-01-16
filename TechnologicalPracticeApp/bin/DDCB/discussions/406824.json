@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "956277",
+    "ThreadId": "406824",
+    "Html": "\r\n<p>I have a page with multiple DropDownCheckBoxes controls, one above the other.</p>\r\n<p>On both IE 8 and 9, when I click the Dropdown button, the checkbox list <strong>\r\nappears behind other DropDownCheckBoxes controls that are below it on the form.</strong><br>\r\nIt covers up standard controls such as buttons and text boxes, but also appears beind&nbsp;the Ajax Tool Kit slider control.</p>\r\n<p>Note that&nbsp;this behavior does not happen on Chrome and Firefox. It also does not happen when I am debugging in VS 2010 and the page is hosted by the ASP.NET Development Server.</p>\r\n<p>&nbsp;I confirmed this issue on a “hello world” type page in a site with no CSS files. So I don’t think there is anything else affecting it.<br>\r\nAnybody seen this before and know of a solution?</p>\r\n<p>Thanks,&nbsp;&nbsp; John Gilbert</p>\r\n",
+    "PostedDate": "2012-12-14T12:56:48.023-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

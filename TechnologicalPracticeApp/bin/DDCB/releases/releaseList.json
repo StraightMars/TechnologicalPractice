@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "0",
+    "Name": "DropDownCheckBoxes",
+    "DevelopmentStatus": "Beta",
+    "Description": "Public release. Contains both binaries (assembly with the control) and source code archive. The archive is recommended for download since it has an example web application consuming the control and presenting it's capabilities.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2011-05-31T03:37:34.687-07:00",
+    "Files": [
+      {
+        "Id": "53117efa-1847-43b1-8f2d-8537729d9459",
+        "FileName": "ddcheckboxes.zip",
+        "Url": "./0/53117efa-1847-43b1-8f2d-8537729d9459",
+        "Type": "Application",
+        "UploadDate": "2011-05-31T03:37:34.517-07:00"
+      },
+      {
+        "Id": "49bd58bd-5257-42f0-aa6d-3c1cda1dbe18",
+        "FileName": "DropDownCheckBoxes.dll",
+        "Url": "./0/49bd58bd-5257-42f0-aa6d-3c1cda1dbe18",
+        "Type": "Application",
+        "UploadDate": "2011-05-31T03:37:34.47-07:00"
+      }
+    ]
+  },
+  {
+    "Id": "1",
+    "Name": "Beta 2",
+    "DevelopmentStatus": "Beta",
+    "Description": "- Fixed server side item selection within async post back (using UpdatePanel)\n- Added 'Style2' property to be used instead of 'Style' property in order to avoid 'Ambiguous match references found' parsing error when declaring property values in .aspx file under Visual Studio 2008  (for VS 2010 the error is not relevant and Style can be used)",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2011-07-29T05:26:38.797-07:00",
+    "Files": [
+      {
+        "Id": "b121ba16-274c-42c9-91b1-0bf00b1b648e",
+        "FileName": "DropDownCheckBxoes (VS2010 Source).zip",
+        "Url": "./1/b121ba16-274c-42c9-91b1-0bf00b1b648e",
+        "Type": "Source Code",
+        "UploadDate": "2011-07-29T02:40:21.19-07:00"
+      },
+      {
+        "Id": "3aee91a5-b80f-46bf-b5f1-62b26f4b2556",
+        "FileName": "DropDownCheckBoxes.dll",
+        "Url": "./1/3aee91a5-b80f-46bf-b5f1-62b26f4b2556",
+        "Type": "Application",
+        "UploadDate": "2011-07-29T02:40:21.207-07:00"
+      }
+    ]
+  }
+]

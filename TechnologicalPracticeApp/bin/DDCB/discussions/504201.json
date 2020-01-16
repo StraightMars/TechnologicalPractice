@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1173523",
+    "ThreadId": "504201",
+    "Html": "When I use your control with the given example from for loop, it works. But for some reason the below code doesn't. Please let me know the reason<br />\n<br />\nNot Working code:<br />\n<pre><code>            DataSet ds = GetTheData(&quot;Jan 2014&quot;);\n            DataTable dt = ds.Tables[0];\n\n            var q = from a in dt.AsEnumerable()\n                       where a.Field&lt;string&gt;(&quot;SomeColumn1&quot;) == &quot;Jan 2014&quot;\n                       select a.Field&lt;string&gt;(&quot;SomeColumn2&quot;);\n\n            var s = q.Distinct().ToList();\n            var years = new string[s.Count];\n            for (int i = 0; i &lt; s.Count; i++)\n                years[i] = s[i];\n\n            DropDownCheckBoxes1.DataSource = years;\n            DropDownCheckBoxes1.DataBind();\n</code></pre>\n\nWorking Code: <br />\n<pre><code>var t = new string[20];\nvar currentYear = DateTime.Now.Year;\nfor (int i = 0; i &lt; t.Length; i++)\nt[i] = &quot;Test   &quot; + i.ToString();\n\nDropDownCheckBoxes1.DataSource = t;\nDropDownCheckBoxes1.DataBind();</code></pre>\n\n",
+    "PostedDate": "2014-01-17T04:19:56.733-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1183029",
+    "ThreadId": "504201",
+    "Html": "I got to know what is wrong. the control DropDowncheckboxes uses Page.ClientScript and even I was using Page.ClientScript at GetTheData() function. This was causing issue. I commented out my Page.ClientScript and it started working. <br />\n",
+    "PostedDate": "2014-01-19T21:11:45.78-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": "2014-01-19T21:11:55.263-08:00"
+  }
+]

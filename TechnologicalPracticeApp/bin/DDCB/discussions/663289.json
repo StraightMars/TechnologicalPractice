@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1497146",
+    "ThreadId": "663289",
+    "Html": "Hello Team,\r<br />\nI have added dll reference in my sharepoint web part application. \r<br />\n<br />\nIt doesn't have web.config so registered assembly using <br />\n<pre><code>&lt;%@ Register Assembly=&quot;DropDownCheckBoxes&quot; Namespace=&quot;Saplin.Controls&quot; TagPrefix=&quot;asp&quot; %&gt;</code></pre>\n\non my aspx page. When i run it on browser, it giving us error as -- \r<br />\n<br />\nCould not load file or assembly 'DropDownCheckBoxes' or one of its dependencies. The system cannot find the file specified.\r<br />\n<br />\n<br />\nCan you please guide what needs to be done for this?\r<br />\nThank You!<br />\n",
+    "PostedDate": "2017-06-21T12:32:26.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

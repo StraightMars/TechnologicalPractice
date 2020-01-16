@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1236626",
+    "ThreadId": "542947",
+    "Html": "I am binding many items from the database in the checkbox div.  Is there a way to create a multiple column layout using this control?  I'm currently looking through the source code to see if there's a way I can modify the code to wrap list items in &lt;li&gt;&lt;/li&gt; tags so that I could create a three column layout, but it seems a bit above my head.\r<br />\n<br />\nAny help is much appreciated! Thanks<br />\n",
+    "PostedDate": "2014-04-22T08:20:13.31-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

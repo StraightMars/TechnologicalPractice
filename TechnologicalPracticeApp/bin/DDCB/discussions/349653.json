@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "814166",
+    "ThreadId": "349653",
+    "Html": "\r\n<p>I need a &nbsp;DropDownCheckBoxes for SharePoint 2007 Web Part. &nbsp;I am able to add it to the project, However the Control Does not DropDown and It appears Disabled.</p>\r\n<p>Please let me know if Web parts are support.</p>\r\n<p>BTW Nice Controls.</p>\r\n<p>&nbsp;</p>\r\n<p>thanks</p>\r\n",
+    "PostedDate": "2012-03-22T10:22:46.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824553",
+    "ThreadId": "349653",
+    "Html": "<p>You have to include it in your package in the solution explorer. &nbsp;Otherwise, the dll won't be included in the package when you build it. &nbsp;This maybe the the cause of your problem. &nbsp;Right click on the \"Package\" node in Solution Explorer and click on View Designer. &nbsp;Look Below for \"Advanced\". &nbsp;This will let you add a 3rd party dll with your Sharepoint solution. &nbsp;This is also the section where you can package icons, files, and folders with your webpart solution.</p>\r\n<p>&nbsp;</p>\r\n<p><a href=\"http://stackoverflow.com/questions/7521697/include-3rd-party-dll-in-the-sharepoint-project-while-packaging-the-wsp\" target=\"_blank\">http://stackoverflow.com/questions/7521697/include-3rd-party-dll-in-the-sharepoint-project-while-packaging-the-wsp</a></p>",
+    "PostedDate": "2012-04-16T13:11:40.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

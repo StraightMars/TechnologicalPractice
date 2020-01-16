@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hey All, I want to check all in the dropdown..do we have any shortcut to do it...I have thousands items in the dropdown...looping is making my page slow...how to automatically make it selected?\r\n\r\nforeach (ListItem item in DD.Items)\r\n{\r\nitem.Selected = true;\r\n}",
+    "LastUpdatedDate": "2012-11-14T07:13:52.64-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2012-11-14T07:13:52.64-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Dropdown checkboxes default selectall",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 11
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

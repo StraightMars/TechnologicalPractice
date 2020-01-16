@@ -1,0 +1,125 @@
+﻿@*@model IEnumerable<TechnologicalPracticeApp.Models.Ecolabel>*@
+@using TechnologicalPracticeApp.Models
+@model TechnologicalPracticeApp.Models.FilterModel
+
+@{
+    ViewBag.Title = "IndexAdmin";
+}
+
+<h2>Экомаркировки</h2>
+
+<form method="get">
+    <div class="form-inline form-group">
+        <label class="control-label">Маркировка: </label>
+        @Html.TextBox("name", Model.Name, htmlAttributes: new { @class = "form-control" })
+
+        <label class="control-label">Компания: </label>
+        @Html.DropDownList("company", Model.Companies as SelectList, htmlAttributes: new { @class = "form-control"})
+
+        <input type="submit" value="Поиск" class="btn btn-default" />
+    </div>
+</form>
+
+<p>
+    @Html.ActionLink("Добавить новую экомаркировку", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Название маркировки
+        </th>
+        <th>
+            Изображение
+        </th>
+        <th>
+            Сертифицирующая компания
+        </th>
+        <th>
+            Страны действия экомаркировки
+        </th>
+        <th>
+            Правила маркировки
+        </th>
+        <th>
+            Маркируемые типы продукции
+        </th>
+    </tr>
+
+@foreach (var item in Model.Ecolabels) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        @{
+            if (item.Image != null)
+            {
+                <td class="display-field">
+                    <img src="@Url.Action("ViewPhoto", "Ecolabels", new { id = item.Id })" width="50" height="50" />
+                </td>
+            }
+            else
+            {
+                <td>Изображение отсутствует.</td>
+            }
+        }
+
+        <td>
+            @Html.DisplayFor(modelItem => item.Company.Name)
+        </td>
+        <td>
+            @{
+                string countries = "";
+
+                foreach (Country_Ecolabel ce in item.Country_Ecolabel)
+                {
+                    if (ce.EcolabelID == item.Id)
+                    {
+                        countries += ce.Country.Name + ", ";
+                    }
+                }
+                countries = countries.TrimEnd(',', ' ');
+            }
+            @countries
+        </td>
+        <td>
+            @{
+                string demands = "";
+
+                foreach (Demand_Ecolabel de in item.Demand_Ecolabel)
+                {
+                    if (de.EcolabelID == item.Id)
+                    {
+                        demands += de.Demand.Rule + ", ";
+                    }
+                }
+                demands = demands.TrimEnd(',', ' ');
+            }
+            @demands
+        </td>
+        <td>
+            @{
+                string types = "";
+
+                foreach (EcoType_Ecolabel ee in item.EcoType_Ecolabel)
+                {
+                    if (ee.EcolabelID == item.Id)
+                    {
+                        types += ee.EcoType.Name + ", ";
+                    }
+                }
+                types = types.TrimEnd(',', ' ');
+            }
+            @types
+        </td>
+        <td>    
+            @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Подробнее", "Details", new { id = item.Id }) |
+            @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+        </td>
+        *@*@<td>
+            @Html.ActionLink("Добавить связь 'Экомаркировка - Страна'", "Create", "Country_Ecolabel", new { id = item.Id }, htmlAttributes: new { placeholder = item.Name})
+        </td>*@
+    </tr>
+}
+
+</table>

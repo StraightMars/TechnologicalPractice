@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI am finding this control suitable for my requirement, However I am finding issue while integrating it with SharePoint 2010 VisualWebPart.\r\n\r\nIssue description:\r\nAfter registering this control to web part, If write markup code with this control, the content in Webpart.ascx.g.cs gets erased and I cant build my webpart.\r\n\r\nBelow are PlatForm Details:\r\nVSTS 2012 sp4, also installed VSTS 2012 Power tools.\r\nSharePoint 2010\r\nOS: Windows 7 64Bit\r\n\r\nBelow written is code I had written\r\n<%@ Register Assembly=\"DropDownCheckBoxes\" Namespace=\"Saplin.Controls\" TagPrefix=\"asp\" %>\r\n\r\n<asp:DropDownCheckBoxes ID=\"ddcbCustom\" runat=\"server\"  UseSelectAllNode=\"True\"\r\n     AddJQueryReference=\"True\" >\r\n    <Style SelectBoxWidth=\"160\" DropDownBoxBoxWidth=\"160\" DropDownBoxBoxHeight=\"115\" />\r\n    <Texts SelectBoxCaption=\"Select \" />\r\n</asp:DropDownCheckBoxes>\r\n\r\nCan some one help in utilising this control with Visual Web Part.",
+    "LastUpdatedDate": "2014-03-14T04:01:47.43-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2014-03-12T05:09:03.33-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Not able to use this Control in SharePoint Visual Web Part with VS 2012",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 18
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I did drill down the causes and modified below mentioned things,\n1. Actually I had integrated the project for my use, The version of the dll keeps on changing on every build. \n2. I am not sure this thing is correct or not, However i changed the resource location from Web to local.\n\nDoing above changes i could integrate it to visual web part, However i face same issue when I use the <Style> mark up.\n\nThanks.",
+      "PostedDate": "2014-03-14T04:01:47.43-07:00",
+      "Id": 136822
+    }
+  ]
+}

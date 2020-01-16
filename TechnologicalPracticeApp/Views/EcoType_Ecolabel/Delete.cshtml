@@ -1,0 +1,39 @@
+﻿@model TechnologicalPracticeApp.Models.EcoType_Ecolabel
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Удаление связи Экомаркировка - Тип экомаркировки</h2>
+
+<h3>Вы действительно хотите удалить данную связь?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Экомаркировка
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ecolabel.Name)
+        </dd>
+
+        <dt>
+            Тип экомаркировки
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EcoType.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn-link" /> |
+            @Html.ActionLink("Вернуться к списку связей", "Index")
+        </div>
+    }
+</div>

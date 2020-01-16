@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nWhen I have \r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=7\" />  \r\non my page the control drop down appears behind other Drop Down CheckBoxList controls rather than in front.  \r\nIs there a way to stop this behaviour? \r\n\r\n ",
+    "LastUpdatedDate": "2012-01-25T04:31:54.283-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2012-01-24T00:58:03.077-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "x-ua-compatibale makes controls appear behind one another",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 2,
+    "Id": 6
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "We had exactly that problem and now use a script added to the start of the DropDownScript.js that invokes jQuery to set the z-index of divs from a high value to a low value from top to bottom of the page.  Found on www.vancelucas.com/blog/fixing-ie7-z-index-issues-with-jquery, (might not be online, but available in Google cache).\nThis is the code we added to the DropDrownScript.js:\n\n$(function () {\n\tif (navigator.appVersion.indexOf('MSIE 7') >= 0) {\n\t\tddcbIe7fix();\n\t\ttry { Sys.WebForms.PageRequestManager.getInstance().add_endRequest(ddcbIe7fix); }\n\t\tcatch (e) {}\n\t} \n})\nfunction ddcbIe7fix() {\n\tvar zN = 10000;\n\t$('div').each(function () {\n\t\t$(this).css('zIndex', zN--);\n\t});\n}\n\nHope that might be of use.",
+      "PostedDate": "2012-01-24T23:34:24.633-08:00",
+      "Id": 53977
+    }
+  ]
+}

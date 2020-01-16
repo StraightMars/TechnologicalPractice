@@ -1,0 +1,48 @@
+﻿@model IEnumerable<TechnologicalPracticeApp.Models.Country_Ecolabel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Связи Экомаркировка - Страна действия</h2>
+
+<p>
+    @Html.ActionLink("Добавить новую", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Экомаркировка
+        </th>
+
+        <th>
+            Страна действия
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ecolabel.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Country.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
+<div>
+    @Html.ActionLink("К списку стран", "Index", "Countries")
+</div>
+<div>
+    @Html.ActionLink("К списку маркировок", "IndexAdmin", "Ecolabels")
+</div>
+<div>
+    @Html.ActionLink("Вернуться к списку связей", "Index");
+</div>

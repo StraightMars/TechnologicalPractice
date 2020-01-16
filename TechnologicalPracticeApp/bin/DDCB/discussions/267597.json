@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "651797",
+    "ThreadId": "267597",
+    "Html": "\r\n<p>Hi, I agree, great tool.</p>\r\n<p>I have a question also.</p>\r\n<p>I need to position the control and am using code to dynamically place the controls on the screen.</p>\r\n<p>I have used all of ASP .net control and was able to set a&nbsp;&nbsp;&nbsp;</p>\r\n<p>objcontrol.Style.Value = &quot;left:250px; position:absolute; top:250px&quot;;&nbsp;&nbsp;</p>\r\n<p>here is my actual code</p>\r\n<p>objControl.Style.Value = &quot;left: &quot; &#43; strLeft &#43; &quot;px; position: absolute; top: &quot; &#43; strTop &#43; &quot;px&quot;;&nbsp;</p>\r\n<p>I am sure there is a way to do that with your control but could you help me with the StyleSheet CSS parts so i can get the control to be placed anywhere of my choosing on the screen.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks again,</p>\r\n",
+    "PostedDate": "2011-08-03T08:08:37.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "652202",
+    "ThreadId": "267597",
+    "Html": "<p>I'd suggest wrapping the control in &lt;div id=\"wrapperDiv\" runat=\"server\"&gt; element and setting wrapperDiv.Style.Value = \"left: \" + strLeft + \"px; position: absolute; top: \" + strTop + \"px\";</p>\r\n<p>Try playing with this solution and it should work.</p>",
+    "PostedDate": "2011-08-04T00:49:39.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "628992",
+    "ThreadId": "261713",
+    "Html": "\r\n<p>Great control. Thank you for sharing.</p>\r\n<p>We are trying to implement it in our web project . One&nbsp;issue&nbsp;that i came across is&nbsp;when i tab from one control to another on the page this particular control&nbsp;&nbsp;doesnt get focus to use the keyboard keys. The focus skips this and &nbsp;jumps\r\n directly to the next control in the list. tried tab orders , set focus but nothing seem to help.</p>\r\n<p>I also notioced that in your sample web project the control doesnt receive focus and is not usable with keyboard functions and have to use the mouse events..</p>\r\n<p>I was looking for something that can match the reporting services native multiparam control rendered by the reportviewer automatically if the report(RDL) has multiple value input&nbsp;parameter. This looks like a drop down list control with check boxes but\r\n looks like it has textbox, image and div panel all put together to create the effect and responds well to the keyboard navigation.</p>\r\n<p>Any thoughts....</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-06-16T16:59:49.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "630475",
+    "ThreadId": "261713",
+    "Html": "<p>The control mimics drop down via custom markup and there's currently no JavaScript for handling focus events. Not sure if I'll have time to add full keyboard support to the control. Anyway it's open source and anybody can do whatever changes he\\she wants.</p>",
+    "PostedDate": "2011-06-21T03:04:33.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

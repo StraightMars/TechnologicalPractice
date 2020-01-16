@@ -1,0 +1,169 @@
+//////////////////////
+////ON THE SERVER:////
+//////////////////////
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Testing
+</title></head>
+<body>
+    <form name="form1" method="post" action="main.aspx" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTg3MzUzMDE3Ng9kFgICAw9kFgQCAQ8PEA8WAh4VQXJlU2NyaXB0c0luaXRpYWxpemVkZ2RkFgAUKwACZGRkAgMPDxAPFgIfAGdkZBYAFCsAAmRkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WEAUNY2hlY2tCb3hlczEkMAUNY2hlY2tCb3hlczEkMQUNY2hlY2tCb3hlczEkMgUNY2hlY2tCb3hlczEkMwUNY2hlY2tCb3hlczEkNAUNY2hlY2tCb3hlczEkNQUNY2hlY2tCb3hlczEkNgUNY2hlY2tCb3hlczEkNgUVRHJvcERvd25DaGVja0JveGVzMSQwBRVEcm9wRG93bkNoZWNrQm94ZXMxJDEFFURyb3BEb3duQ2hlY2tCb3hlczEkMgUVRHJvcERvd25DaGVja0JveGVzMSQzBRVEcm9wRG93bkNoZWNrQm94ZXMxJDQFFURyb3BEb3duQ2hlY2tCb3hlczEkNQUVRHJvcERvd25DaGVja0JveGVzMSQ2BRVEcm9wRG93bkNoZWNrQm94ZXMxJDavg1JjZ8rWnijmHVMDg1lxxJAp5VNkGVZv9QemoSp67w==" />
+</div>
+ 
+<script type="text/javascript"> 
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+ 
+ 
+ 
+<script src="/MSU/WebResource.axd?d=oPijM6lYD8PbwGQIWhmGZRieQ_oGbYqhVzDrQ0W_e4MzYg7IHVhBxYamay8l3Rj-RDoJ_A028hIAQpR18raP_UWnCh8QaM8bmOC1jAG3TGmxzgRlz8tAZf76mNwV6dLZ9JesvcQiPCqH4IGPG11PJpBrVsq3ntk057agcokRJ7pHY_EJJM6F1j0WIScvQStb0&amp;t=634461474609667373" type="text/javascript"></script>
+<script src="/MSU/WebResource.axd?d=TMcFcSFpwCaHN31hQwzEowS3AZZyVkTlJ34YeufkPGbiXJCdxT31Ce9vmMT-OKnFqCpPTVLA5uBmY_hY-OC1NV_OrAKRlIW2QJPm83b5qVKFXOgXhW4Rs5kUmzUG1mb5djoAZbCIpp_dIJnli4Coc4kwBe1dpj9WFpudCgsUTDKejkvuVnMK0_UUICJZ_j1i0&amp;t=634461474609667373" type="text/javascript"></script>
+<script type="text/javascript"> 
+//<![CDATA[
+function dd_chk_checkBoxes1(){ __doPostBack('checkBoxes1','') }//]]>
+</script>
+<link rel='stylesheet' type='text/css' href='/MSU/WebResource.axd?d=Pxon2zH5drgKmNyFgpx3o_1Y7TUQedgpJwjG7qbY65BsVfNrUZkk6lPRTTLNa0Icwgn4Oh4mUp3hCZqYG_jsqHnDfxcJxk5gztjFJ5yDZHiHPnIcS9AqwUX4KLAJZEGwY58L5I-vdLs16KWWFC6OhYt80WbIlsozlN52jrua9I81&t=634461474609667373' />
+<script type="text/javascript"> 
+//<![CDATA[
+function dd_chk_DropDownCheckBoxes1(){ __doPostBack('DropDownCheckBoxes1','') }//]]>
+</script>
+ 
+<div>
+ 
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDwKczrXqCQKg1OGvDAKf1OGvDAKe1OGvDAKd1OGvDAKc1OGvDAKb1OGvDAKa1OGvDALJ6dDVDwLK6dDVDwLL6dDVDwLM6dDVDwLF6dDVDwLG6dDVDwLH6dDVD6ZnQex7ON92UCsepsNQcvi4ESeUsyszMzSJ+PB/EsGF" />
+</div>
+    <div>
+         <div id="checkBoxes1_sl" class="dd_chk_select" style="display:inline-block;position:relative;width:100px;">
+	<div id="caption">
+		Some big text which doesn&#39;t fit the control
+	</div><div id="checkBoxes1_dv" class="dd_chk_drop" style="display:none;position:absolute;">
+		<div id="checks">
+			<span style="display:block;"><input type='checkbox' name='checkBoxes1_sll'><label for='checkBoxes1_sll'>Select all</label></span><span id="checkBoxes1"><input id="checkBoxes1_0" type="checkbox" name="checkBoxes1$0" /><label for="checkBoxes1_0">Option 1</label><br /><input id="checkBoxes1_1" type="checkbox" name="checkBoxes1$1" /><label for="checkBoxes1_1">Option 2</label><br /><input id="checkBoxes1_2" type="checkbox" name="checkBoxes1$2" /><label for="checkBoxes1_2">Option 3 + Some big text which doesn't fit the control</label><br /><input id="checkBoxes1_3" type="checkbox" name="checkBoxes1$3" /><label for="checkBoxes1_3">Option 4</label><br /><input id="checkBoxes1_4" type="checkbox" name="checkBoxes1$4" /><label for="checkBoxes1_4">Option 5</label><br /><input id="checkBoxes1_5" type="checkbox" name="checkBoxes1$5" /><label for="checkBoxes1_5">Option 6</label><br /><input id="checkBoxes1_6" type="checkbox" name="checkBoxes1$6" /><label for="checkBoxes1_6">Option 7</label></span>
+		</div>
+	</div>
+</div>
+            <br />
+            <div id="DropDownCheckBoxes1_sl" class="dd_chk_select" style="display:inline-block;position:relative;width:100px;">
+	<div id="caption">
+		Some big text which doesn&#39;t fit the control
+	</div><div id="DropDownCheckBoxes1_dv" class="dd_chk_drop" style="display:none;position:absolute;">
+		<div id="checks">
+			<span style="display:block;"><input type='checkbox' name='DropDownCheckBoxes1_sll'><label for='DropDownCheckBoxes1_sll'>Select all</label></span><span id="DropDownCheckBoxes1"><input id="DropDownCheckBoxes1_0" type="checkbox" name="DropDownCheckBoxes1$0" /><label for="DropDownCheckBoxes1_0">Option 1</label><br /><input id="DropDownCheckBoxes1_1" type="checkbox" name="DropDownCheckBoxes1$1" /><label for="DropDownCheckBoxes1_1">Option 2</label><br /><input id="DropDownCheckBoxes1_2" type="checkbox" name="DropDownCheckBoxes1$2" /><label for="DropDownCheckBoxes1_2">Option 3 + Some big text which doesn't fit the control</label><br /><input id="DropDownCheckBoxes1_3" type="checkbox" name="DropDownCheckBoxes1$3" /><label for="DropDownCheckBoxes1_3">Option 4</label><br /><input id="DropDownCheckBoxes1_4" type="checkbox" name="DropDownCheckBoxes1$4" /><label for="DropDownCheckBoxes1_4">Option 5</label><br /><input id="DropDownCheckBoxes1_5" type="checkbox" name="DropDownCheckBoxes1$5" /><label for="DropDownCheckBoxes1_5">Option 6</label><br /><input id="DropDownCheckBoxes1_6" type="checkbox" name="DropDownCheckBoxes1$6" /><label for="DropDownCheckBoxes1_6">Option 7</label></span>
+		</div>
+	</div>
+</div>
+            </div>
+    
+ 
+<script type="text/javascript"> 
+//<![CDATA[
+window.checkBoxes1 = new DropDownScript('checkBoxes1','_dv','_sl',dd_chk_checkBoxes1, false, true, true); window.checkBoxes1.init();window.DropDownCheckBoxes1 = new DropDownScript('DropDownCheckBoxes1','_dv','_sl',dd_chk_DropDownCheckBoxes1, false, true, true); window.DropDownCheckBoxes1.init();//]]>
+</script>
+</form>
+</body>
+</html>
+
+
+//////////////////////
+////////ON DEV:///////
+//////////////////////
+ 
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head><title>
+	Testing
+</title></head>
+<body>
+    <form name="form1" method="post" action="main.aspx" id="form1">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKLTg3MzUzMDE3Ng9kFgICAw9kFgQCAQ8PEA8WAh4VQXJlU2NyaXB0c0luaXRpYWxpemVkZ2RkFgAUKwACZGRkAgMPDxAPFgIfAGdkZBYAFCsAAmRkZBgBBR5fX0NvbnRyb2xzUmVxdWlyZVBvc3RCYWNrS2V5X18WEAUNY2hlY2tCb3hlczEkMAUNY2hlY2tCb3hlczEkMQUNY2hlY2tCb3hlczEkMgUNY2hlY2tCb3hlczEkMwUNY2hlY2tCb3hlczEkNAUNY2hlY2tCb3hlczEkNQUNY2hlY2tCb3hlczEkNgUNY2hlY2tCb3hlczEkNgUVRHJvcERvd25DaGVja0JveGVzMSQwBRVEcm9wRG93bkNoZWNrQm94ZXMxJDEFFURyb3BEb3duQ2hlY2tCb3hlczEkMgUVRHJvcERvd25DaGVja0JveGVzMSQzBRVEcm9wRG93bkNoZWNrQm94ZXMxJDQFFURyb3BEb3duQ2hlY2tCb3hlczEkNQUVRHJvcERvd25DaGVja0JveGVzMSQ2BRVEcm9wRG93bkNoZWNrQm94ZXMxJDbStgmQx+wXJ9KkitCecywnhdamjpC3QBtUCRJxebL6lw==" />
+</div>
+ 
+<script type="text/javascript"> 
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+ 
+ 
+ 
+<script src="/WebResource.axd?d=6N-CYndVmomAO4YoYHcRJgeav7IUsu-1-nhQoeqtcVEJrLOsCBZOK-HPrNA9LVvmcExzWFf9bwI7fANOYYhfgyF04tHCnmuzZAmgi01DpO_S8YadycbK6-0ZUFYsTuJsm4PFSPAu_SrPmge8MmWLffQrHNuzqXGkOpO76z424kOfmphM5F8jzmH09aPsjwGQ0&amp;t=634461474609667373" type="text/javascript"></script>
+<script src="/WebResource.axd?d=0__gusJ3c_n75nHc6U3eq2j7tqZVvZNfaZBhNb4oNXuzesBRz2TPSzJH6X3GDaZGbrei88Tz6KMiHVchf2me9pHCsRJ-0DGL3-wbyCWzcQqYwlptdjFRzq_GPrjdJ9pks_nwPvzsN19ZWQc3x4eiPtzq6-CSGrC9OQiPwXK0JrnJBJiq5uYutkCAkcZDMCNj0&amp;t=634461474609667373" type="text/javascript"></script>
+<script type="text/javascript"> 
+//<![CDATA[
+function dd_chk_checkBoxes1(){ __doPostBack('checkBoxes1','') }//]]>
+</script>
+<link rel='stylesheet' type='text/css' href='/WebResource.axd?d=lsMZChDJYzLRJjbN6yHFL28zthzoIlRK5-w9RBug3aNuhD7p2Yk7Qh8D0E_O7hyCVel64H9uBVZfwi3tKjrF_RaKjv1HmlsTdccHRg5pdUCAQJOSTKbFWUtX9zAqvDNKRh0Al_HzuVgB6ElY0N7LaYsTVqgygnNELaOeWZGpttM1&t=634461474609667373' />
+<script type="text/javascript"> 
+//<![CDATA[
+function dd_chk_DropDownCheckBoxes1(){ __doPostBack('DropDownCheckBoxes1','') }//]]>
+</script>
+ 
+<div>
+ 
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWDwKVr5XTDQKg1OGvDAKf1OGvDAKe1OGvDAKd1OGvDAKc1OGvDAKb1OGvDAKa1OGvDALJ6dDVDwLK6dDVDwLL6dDVDwLM6dDVDwLF6dDVDwLG6dDVDwLH6dDVDzzVUD9H6PPaEth4DucGrZigZYbULfrCYwViqRzS93Z2" />
+</div>
+    <div>
+         <div id="checkBoxes1_sl" class="dd_chk_select" style="display:inline-block;position:relative;width:100px;">
+	<div id="caption">
+		Some big text which doesn&#39;t fit the control
+	</div><div id="checkBoxes1_dv" class="dd_chk_drop" style="display:none;position:absolute;">
+		<div id="checks">
+			<span style="display:block;"><input type='checkbox' name='checkBoxes1_sll'><label for='checkBoxes1_sll'>Select all</label></span><span id="checkBoxes1"><input id="checkBoxes1_0" type="checkbox" name="checkBoxes1$0" /><label for="checkBoxes1_0">Option 1</label><br /><input id="checkBoxes1_1" type="checkbox" name="checkBoxes1$1" /><label for="checkBoxes1_1">Option 2</label><br /><input id="checkBoxes1_2" type="checkbox" name="checkBoxes1$2" /><label for="checkBoxes1_2">Option 3 + Some big text which doesn't fit the control</label><br /><input id="checkBoxes1_3" type="checkbox" name="checkBoxes1$3" /><label for="checkBoxes1_3">Option 4</label><br /><input id="checkBoxes1_4" type="checkbox" name="checkBoxes1$4" /><label for="checkBoxes1_4">Option 5</label><br /><input id="checkBoxes1_5" type="checkbox" name="checkBoxes1$5" /><label for="checkBoxes1_5">Option 6</label><br /><input id="checkBoxes1_6" type="checkbox" name="checkBoxes1$6" /><label for="checkBoxes1_6">Option 7</label></span>
+		</div>
+	</div>
+</div>
+            <br />
+            <div id="DropDownCheckBoxes1_sl" class="dd_chk_select" style="display:inline-block;position:relative;width:100px;">
+	<div id="caption">
+		Some big text which doesn&#39;t fit the control
+	</div><div id="DropDownCheckBoxes1_dv" class="dd_chk_drop" style="display:none;position:absolute;">
+		<div id="checks">
+			<span style="display:block;"><input type='checkbox' name='DropDownCheckBoxes1_sll'><label for='DropDownCheckBoxes1_sll'>Select all</label></span><span id="DropDownCheckBoxes1"><input id="DropDownCheckBoxes1_0" type="checkbox" name="DropDownCheckBoxes1$0" /><label for="DropDownCheckBoxes1_0">Option 1</label><br /><input id="DropDownCheckBoxes1_1" type="checkbox" name="DropDownCheckBoxes1$1" /><label for="DropDownCheckBoxes1_1">Option 2</label><br /><input id="DropDownCheckBoxes1_2" type="checkbox" name="DropDownCheckBoxes1$2" /><label for="DropDownCheckBoxes1_2">Option 3 + Some big text which doesn't fit the control</label><br /><input id="DropDownCheckBoxes1_3" type="checkbox" name="DropDownCheckBoxes1$3" /><label for="DropDownCheckBoxes1_3">Option 4</label><br /><input id="DropDownCheckBoxes1_4" type="checkbox" name="DropDownCheckBoxes1$4" /><label for="DropDownCheckBoxes1_4">Option 5</label><br /><input id="DropDownCheckBoxes1_5" type="checkbox" name="DropDownCheckBoxes1$5" /><label for="DropDownCheckBoxes1_5">Option 6</label><br /><input id="DropDownCheckBoxes1_6" type="checkbox" name="DropDownCheckBoxes1$6" /><label for="DropDownCheckBoxes1_6">Option 7</label></span>
+		</div>
+	</div>
+</div>
+            </div>
+    
+ 
+<script type="text/javascript"> 
+//<![CDATA[
+window.checkBoxes1 = new DropDownScript('checkBoxes1','_dv','_sl',dd_chk_checkBoxes1, false, true, true); window.checkBoxes1.init();window.DropDownCheckBoxes1 = new DropDownScript('DropDownCheckBoxes1','_dv','_sl',dd_chk_DropDownCheckBoxes1, false, true, true); window.DropDownCheckBoxes1.init();//]]>
+</script>
+</form>
+</body>
+</html>
+
+
+

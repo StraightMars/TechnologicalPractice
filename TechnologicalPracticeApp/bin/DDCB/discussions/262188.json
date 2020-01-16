@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "630615",
+    "ThreadId": "262188",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>this control is great work so far. It helped me a lot fot my application.</p>\r\n<p>There are two questions:</p>\r\n<p>How can I&nbsp;set the &quot;Select All&quot; entry to checked or unchecked in the programcode?</p>\r\n<p>How can I determine wether &quot;Select All&quot; is checked or not?</p>\r\n<p>Cheers,</p>\r\n<p>mindcrimer</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-06-21T08:02:09.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "630929",
+    "ThreadId": "262188",
+    "Html": "<p>'Select all' is a virtual node which doesn't have any item you can access on server side or some dedicated client side API. The value of the node is evalutaed depending on the selection of other check boxes i.e. it can't be set directly. If you want this  value selected you may either go through all elements of the collection DropDownCheckBoxes.Items and set ListItem.Selected = true (server side). Or use jQuery to set checked value of all check boxes within element with the id == DropDownCheckBoxes.ClientID  (client side).</p>\n<p>Determinig whether 'Select All' is checked or not is the same concept: you need to go through all check boxes checking if all of them are checked - you still need to iterate either server or client side.</p>",
+    "PostedDate": "2011-06-21T23:04:58.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

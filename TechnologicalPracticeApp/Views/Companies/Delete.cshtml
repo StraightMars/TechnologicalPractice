@@ -1,0 +1,47 @@
+﻿@model TechnologicalPracticeApp.Models.Company
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Удаление компании</h2>
+
+<h3>Вы действительно хотите удалить данную компанию?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Название
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            Адрес
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            Номер телефона
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Удалить" class="btn-link" /> |
+            @Html.ActionLink("Вернуться к списку компаний", "Index")
+        </div>
+    }
+</div>

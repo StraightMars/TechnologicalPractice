@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "684069",
+    "ThreadId": "275845",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>thanks for your control I've searching for a while and yours seems to fit the bill.</p>\r\n<p>If I use your example using the years as datasource, no problem</p>\r\n<p>However when I add a sqldatasource to the control it spits out the result list twice?</p>\r\n<p>Also, the control kills the Design screen in VS2008 SP1, so I would image it will be the last thing to be added to a page?</p>\r\n<p>Any ideas how I might fix either?</p>\r\n<p>Thanks once again</p>\r\n<p>Regards</p>\r\n",
+    "PostedDate": "2011-10-13T18:17:05.193-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "685787",
+    "ThreadId": "275845",
+    "Html": "<p>Now sure how you connected the bind the sql data to your control, but I used a datatable and it works fine. &nbsp;Not sure about your other problem.</p>\r\n<p>&nbsp;</p>\r\n<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>\t    DataTable _DataTable = <span style=\"color: blue;\">null</span>;\r\n            <span style=\"color: green;\">//use to load the multiselech checkboxes during searching</span>\r\n            \r\n            _DataTable.Columns.Add(<span style=\"color: blue;\">new</span> DataColumn(<span style=\"color: #a31515;\">\"id\"</span>, <span style=\"color: blue;\">typeof</span>(System.String)));\r\n            _DataTable.Columns.Add(<span style=\"color: blue;\">new</span> DataColumn(<span style=\"color: #a31515;\">\"name\"</span>, <span style=\"color: blue;\">typeof</span>(System.String)));\r\n\r\n\t    <span style=\"color: blue;\">while</span> (reader.Read()){\r\n\t         _DataTable.Rows.Add(<span style=\"color: blue;\">new</span> <span style=\"color: blue;\">string</span>[] {reader[<span style=\"color: #a31515;\">\"sqlfield_Id\"</span>].ToString(), reader[<span style=\"color: #a31515;\">\"sqlfield_name\"</span>].ToString()});\r\n\t    }\r\n\r\n\t    droDownSelect.DataSource = _DataTable;\r\n            droDownSelect.DataTextField = <span style=\"color: #a31515;\">\"name\"</span>;\r\n            droDownSelect.DataValueField = <span style=\"color: #a31515;\">\"id\"</span>;\r\n            droDownSelect.DataBind();\r\n</pre>\r\n</div>\r\n</p>",
+    "PostedDate": "2011-10-18T07:37:14.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "689326",
+    "ThreadId": "275845",
+    "Html": "<p>Hi t4nguyen</p>\r\n<p>I create the dropdownboxes using an sqldatasource</p>\r\n<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>&lt;div style=<span style=\"color: #a31515;\">\"padding-top: 20px;\"</span>&gt;\r\n&lt;asp:DropDownCheckBoxes ID=<span style=\"color: #a31515;\">\"ProductCheckBoxes\"</span> runat=<span style=\"color: #a31515;\">\"server\"</span>\r\nOnSelectedIndexChanged=<span style=\"color: #a31515;\">\"ProductCheckBoxes_SelectedIndexChanged\"</span>\r\nAddJQueryReference=<span style=\"color: #a31515;\">\"True\"</span> UseButtons=<span style=\"color: #a31515;\">\"True\"</span> UseSelectAllNode=<span style=\"color: #a31515;\">\"False\"</span>\r\n        DataSourceID=<span style=\"color: #a31515;\">\"SqlDataSource1\"</span> RepeatDirection=<span style=\"color: #a31515;\">\"Horizontal\"</span>\r\n        DataTextField=<span style=\"color: #a31515;\">\"Item\"</span> DataValueField=<span style=\"color: #a31515;\">\"ProductId\"</span> &gt;\r\n&lt;Style2 SelectBoxWidth=<span style=\"color: #a31515;\">\"160px\"</span> DropDownBoxBoxWidth=<span style=\"color: #a31515;\">\"250px\"</span> DropDownBoxBoxHeight=<span style=\"color: #a31515;\">\"200px\"</span> /&gt;\r\n &lt;Texts SelectBoxCaption=<span style=\"color: #a31515;\">\"Product selection\"</span> /&gt;\r\n&lt;/asp:DropDownCheckBoxes&gt;\r\n\r\n&lt;/div&gt;\r\n&lt;div style=<span style=\"color: #a31515;\">\"padding-top: 20px;\"</span>&gt;\r\n&lt;h3&gt;Selected items (updated whenever postback <span style=\"color: blue;\">from</span> <span style=\"color: blue;\">any</span> of the controls occurs)&lt;/h3&gt;\r\n&lt;asp:Panel ID=<span style=\"color: #a31515;\">\"ProductSelectedItemsPanel\"</span> runat=<span style=\"color: #a31515;\">\"server\"</span>&gt;\r\n&lt;/asp:Panel&gt;\r\n&lt;/div&gt;\r\n</pre>\r\n</div>\r\n</p>\r\n<p>and in the code behind file</p>\r\n<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre><span style=\"color: blue;\">Protected</span> <span style=\"color: blue;\">Sub</span> ProductCheckBoxes_SelectedIndexChanged(<span style=\"color: blue;\">ByVal</span> sender <span style=\"color: blue;\">As</span> <span style=\"color: blue;\">Object</span>, <span style=\"color: blue;\">ByVal</span> e <span style=\"color: blue;\">As</span> EventArgs)\r\n        <span style=\"color: blue;\">For</span> <span style=\"color: blue;\">Each</span> item <span style=\"color: blue;\">As</span> ListItem <span style=\"color: blue;\">In</span> TryCast(sender, ListControl).Items\r\n            <span style=\"color: blue;\">If</span> item.Selected <span style=\"color: blue;\">Then</span>\r\n                ProductSelectedItemsPanel.Controls.Add(<span style=\"color: blue;\">New</span> LiteralControl <span style=\"color: blue;\">With</span> {.Text = item.Text + <span style=\"color: #a31515;\">\" : \"</span> + item.Value &amp; <span style=\"color: #a31515;\">\"&lt;br/&gt;\"</span>})\r\n            <span style=\"color: blue;\">End</span> <span style=\"color: blue;\">If</span>\r\n        <span style=\"color: blue;\">Next</span>\r\n    <span style=\"color: blue;\">End</span> <span style=\"color: blue;\">Sub</span>\r\n</pre>\r\n</div>\r\n</p>\r\n<p>and I get the following result when I select the checkboxes</p>\r\n<p>Washer/Dryer : 3<br />Stove/Oven : 4<br />Washer/Dryer : 3<br />Stove/Oven : 4</p>\r\n<p>As you can see I get a double up on the print out.</p>\r\n<p>I have tried databinding the DropDownCheckBoxes with code but get the same result.</p>\r\n<p>The Design screen issue seems to have resolved itself.</p>\r\n<p>Any ideas?</p>\r\n<p>Thanks for your input.</p>\r\n<p>Regards</p>",
+    "PostedDate": "2011-10-25T15:29:44.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "689604",
+    "ThreadId": "275845",
+    "Html": "<p>Offhand, I can't tell without stepping through the codes.</p>\r\n<p>What does sender object contains before the For Each? Is the data repeated when it came in or during the for loooop? &nbsp;Did you inspect the html and see what data is actually in the control you created?</p>\r\n<p>Let me know...when I did mine, I grabbed the items directly from javascript by looping through the checked boxes that was created by the control.</p>",
+    "PostedDate": "2011-10-26T06:30:38.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

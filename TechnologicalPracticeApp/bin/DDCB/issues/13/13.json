@@ -1,0 +1,45 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 1,
+    "Custom": null,
+    "Description": "The 'select all' checkbox does not function properly in IE9. It reliably unchecks all, but if you click it again nothing rechecks (or if it does, try clicking twice more and it doesn't).\r\n\r\nWorkaround: use IE8 rendering mode for the page (not a good solution for many of us): \r\n\r\n<meta http-equiv=\"X-UA-Compatible\" content=\"IE=8\" />",
+    "LastUpdatedDate": "2014-05-26T04:48:52.25-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2013-04-29T04:30:14.093-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Select all broken in IE9",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 13
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "I fixed the issue using the jquery method .prop() instead of .attr()  in selectAll and deselectAll functions (DropDownScript.js)\n\n\nDropDownScript.prototype.selectAll = function () {\n    this.getItems().prop(\"checked\", true);\n}\n\nDropDownScript.prototype.deselectAll = function () {\n    this.getItems().prop(\"checked\", false);\n}\n",
+      "PostedDate": "2014-05-26T04:48:52.25-07:00",
+      "Id": 147911
+    }
+  ]
+}

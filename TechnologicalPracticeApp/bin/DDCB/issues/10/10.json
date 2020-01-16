@@ -1,0 +1,71 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 5,
+    "Custom": null,
+    "Description": "Hello,\r\nGreat job!!!\r\nControl is working great when directly placed on page, but throwing 'DropDownScript is undefined' exception when trying to place it inside DetialsView. Please suggest, thanks",
+    "LastUpdatedDate": "2013-09-11T02:15:12.563-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2012-07-19T13:48:42.797-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "\"DropDownScript\" is undefined error",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 3,
+    "Id": 10
+  },
+  "FileAttachments": [
+    {
+      "FileId": 461474,
+      "FileName": "Error.png",
+      "DownloadUrl": ".\\461474"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Hello ,\nGreat Control i have ever seen working perfectly in page load .But dropdown onselectedIndexchange The control is throwing error  \"DropDownScript\" is undefined error.\n Thaks,\n           waiting for your replay.",
+      "PostedDate": "2012-09-30T05:55:30.53-07:00",
+      "Id": 78126
+    },
+    {
+      "Message": "Hi, I'm getting the same error. If I change the DropDownCheckboxes control visibility to true on a UpdatePanel postback, I get a \"Microsoft JScript runtime error: 'DropDownScript' is undefined\". The client-side script may not be registering. I'm wondering if tehre is a work-around for this, other than refreshing the entire page?",
+      "PostedDate": "2013-02-18T20:52:16.41-08:00",
+      "Id": 90730
+    },
+    {
+      "Message": "Fixed the issue in my case, just needed to add dd.AddJQueryReference = true; in the codebehind.",
+      "PostedDate": "2013-02-18T21:42:32.853-08:00",
+      "Id": 90735
+    },
+    {
+      "Message": "I ran into the same issues with \"dropdownscript\" not defined error.  I have a repeater with the DropDownCheckBoxes controls inside the ItemTemplate of the repeater.  When I tried to databind the controls in code behind that's when I got that error.\n\nIf the control is used declaratively everything is fine.  So my workaround is to declaratively put a control on the page and set its display property to false. (The Visible must be true otherwise the required scripts won't be added)\n\n<div style=\"display:none\">\n<asp:DropDownCheckBoxes ID=\"ddcbPlaceHolderToAddRequiredScripts\" runat=\"server\" Visible=\"true\">\n</asp:DropDownCheckBoxes> \n</div>    \n\nIf anyone has a better solution please let me know.",
+      "PostedDate": "2013-02-28T12:45:55.01-08:00",
+      "Id": 91854
+    },
+    {
+      "Message": "AddJQueryReference = true gave me a js error in the jquery itself.\nruthlessluder's workaround however, does work for me as well. But indeed, this is a workaround and not really a solution. I'm very curious if someone has solved this in a different way.",
+      "PostedDate": "2013-09-11T02:15:12.563-07:00",
+      "Id": 113142
+    }
+  ]
+}

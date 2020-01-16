@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\r\n\r\nI am using this control in my SharePoint application.\r\n\r\nIs there any chance to display selected values in or is there any way to hide the select .\r\n\r\nBecause user will confuse even after selecting the value also it is showing select only.\r\n\r\nWhen i am adding the dll it is asking for strong name even i created strong name also it is not working.\r\n\r\nPlease help me to solve the issue\r\n\r\n\r\n\r\n\r\n",
+    "LastUpdatedDate": "2013-05-24T23:58:51.923-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2013-05-24T11:47:56.343-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "How to provide validation for the control and even i am selecting the values also it showing select only.",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 14
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

@@ -1,0 +1,91 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 8,
+    "Custom": null,
+    "Description": "Firstly: THANK YOU! This is one cool control that puts the MS team to shame.\r\n\r\nI have a display problem when I publish the solution in production. \r\n\r\nOn dev. (VS2010) it looks perfect and works as it should. But when I put it in production (Server 2003 IIS 6, Framework 4.0.30319 the control when expanded is displayed under the one beneath.  I attached a screen grab but in a few words: if I have two dropdown checkboxlists one just beneath the other and I try to expand the upper one, the effect I get is that the lower one remains visible and the extended list is under the lower one. \r\nI did not implement any changes to CSS.  I only added this line to get the size and text: \r\n<Style SelectBoxCssClass=\"\" SelectBoxWidth=\"300\" DropDownBoxBoxWidth=\"300\" DropDownBoxBoxHeight=\"\"></Style>\r\n<Texts SelectAllNode=\"Select all\" SelectBoxCaption=\"Peripheral Events\"></Texts>   \r\n\r\nEdit: It works in Chrome and FF, it's only IE that has this problem. \r\n\r\nThank you again for the control and for any help with this issue you might be able to provide.\r\n//Florin\r\n",
+    "LastUpdatedDate": "2011-10-10T01:52:24.463-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2011-07-15T01:27:58.9-07:00",
+    "Status": {
+      "Name": "Resolved",
+      "Id": 7
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Display problem",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 3
+  },
+  "FileAttachments": [
+    {
+      "FileId": 259339,
+      "FileName": "2.png",
+      "DownloadUrl": ".\\259339"
+    },
+    {
+      "FileId": 260100,
+      "FileName": "code_behind_compare.txt",
+      "DownloadUrl": ".\\260100"
+    }
+  ],
+  "Comments": [
+    {
+      "Message": "Which IE version? I've only tested the control in IE8 and intentionaly ingored older versions (since I hate them :)",
+      "PostedDate": "2011-07-17T11:49:26.797-07:00",
+      "Id": 39835
+    },
+    {
+      "Message": "Hi Maxim,\nI am using IE8. \nI am not sure it's only the browser. As I mentioned before the control works fine when I run the solution from VS 2010 in IE8 locally in debug mode.\n \n\n",
+      "PostedDate": "2011-07-17T23:40:19.413-07:00",
+      "Id": 39850
+    },
+    {
+      "Message": "Will check this latter. But could you please clarify if you used IE8 which is running on the server or not. As far as I remember by default the browser has JavaScript turned off in Windows Server OS family.",
+      "PostedDate": "2011-07-18T05:17:21.063-07:00",
+      "Id": 39855
+    },
+    {
+      "Message": "I tested on my workstation, the same one where the development environment is and also on another client. I also looked and compared the code behind from both the server and my VS2010 and it looks identical withe exception of the virtual path of the application on the server. Here it how it looks:\r\nOn the server: <script src=\"/MSU/WebResource.axd?d=oPijM6lYD8PbwGQIWhmGZRieQ_oGbYqhVzDrQ0W.......\r\nOn dev:  <script src=\"/WebResource.axd?d=6N-CYndVmomAO4YoYHcRJgeav7IUsu.......\r\n\r\nI attach a txt file with the two code behind I get on a very simple test page. First one up is the server (the wrong one) and underneath the Development (the good one) separated by //////////////\r\n\r\nThank you for any help you might be able to provide.\r\n//Florin",
+      "PostedDate": "2011-07-18T06:13:18.16-07:00",
+      "Id": 39856
+    },
+    {
+      "Message": "I've checked the markup generated on the server and development machine and I may say that it's identical with the exception of:\n1. All encoded values (viewstate, event validation hidden field) due to different machine keys\n2. Pathes to web resources - due to different location on the machines\n\nThese differences can't influence the way the page is rendered since the markup is the same. \n\nAlso the same effect as in the provided picture is present when IE8 is working in compatibility mode (in IE8 I've reproduced it only in compatibility mode). Unfortunately I didn't find any quick fix to this issue. Seems like in compatibility mode IE8 handles z-index CSS property differently which doesn't allow the drop down DIV do be on top of the top level DIVs rendered by rest controls.",
+      "PostedDate": "2011-07-18T07:54:37.843-07:00",
+      "Id": 39860
+    },
+    {
+      "Message": "Hi Maxim,\nOnce again, Thank you! \nYour hint about the compatibility mode was spot on. \nMy production page is actually on the intranet and the IE8 has the setting \"Display intranet sites in Compatibility view\" checked by default (not sure if it's a general thing or a GPO enforced rule in my company). \nThe quick solution I found was to add this line: <meta http-equiv=\"X-UA-Compatible\" content=\"IE=EmulateIE8\" /> in the <head> tag.\nThis fixes my problem.\n\nThank you for taking the time to look into this issue and thus help me. I hope this will help others as well.\nHave a really nice day!\n//Florin",
+      "PostedDate": "2011-07-19T00:12:46.323-07:00",
+      "Id": 39956
+    },
+    {
+      "Message": "Hi,\nI have the same display problem.\nEverthing is fine in FF4, FF5, IE9 but when I set the IE9 to compatibility mode the display is like the attached screenshot from Florin.\n\nAny suggestions ?\nRegards\nChristian",
+      "PostedDate": "2011-10-10T01:30:55.283-07:00",
+      "Id": 46510
+    },
+    {
+      "Message": "Hi Veux\n\nThe quick solution I found was to add this line: <meta http-equiv=\"X-UA-Compatible\" content=\"IE=EmulateIE8\" /> in the <head> tag.\n\nAfter 2 months in production I had no complaints from users.\n",
+      "PostedDate": "2011-10-10T01:52:24.463-07:00",
+      "Id": 46511
+    }
+  ]
+}

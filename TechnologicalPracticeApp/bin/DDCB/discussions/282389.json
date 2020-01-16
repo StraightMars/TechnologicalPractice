@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "709835",
+    "ThreadId": "282389",
+    "Html": "\r\n<p>I'm trying to use this control in an asp.net 4 app that uses a MasterPageFile. There's a asp:Menu in the master page and if I remove the menu the drop down functions correctly but no drop down display with the menu in place. Is there a workaround for this?</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2011-12-09T05:18:30.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

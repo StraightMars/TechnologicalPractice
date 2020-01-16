@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "647228",
+    "ThreadId": "266488",
+    "Html": "\r\n<p>Hi,&nbsp;</p>\r\n<p>First of all, thanks for sharing this great control!&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>I do however have a question. Some of our users still work with IE7 and in IE7 the DropDownList appears behind the underlying CheckBoxList control.&nbsp;</p>\r\n<p>In IE8 and IE9 and Chrome, the&nbsp;DropDownList appears over the underlying CheckBoxList control, as it should.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Without css-styling the DropDownList also appears behind the underlying, so it's not a css-thing.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Any ideas how to solve this?</p>\r\n<p>&nbsp;</p>\r\n<p>Best regards</p>\r\n",
+    "PostedDate": "2011-07-25T09:16:09.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "647274",
+    "ThreadId": "266488",
+    "Html": "<p>Unfortunately IE 6, 7 and IE 8 in Compatible mode are not supported and within the current mark-up I didn't find any suitable CSS solution. IE 7 seems to ignore z-index for the drop down DIV when it's inside a wrapping DIV.</p>",
+    "PostedDate": "2011-07-25T11:33:30.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

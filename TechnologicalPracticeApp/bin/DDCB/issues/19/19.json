@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hi,\r\nI just downloaded the dll and added the reference in the bin and web.config. However I am facing two (2) issues now as below:\r\n\r\n1. While building I am getting Ambigious reference errors for - <Style>, <Style2>, <Text> and <Text2>.\r\n2. Not able to bind data as below:\r\n\r\nHTML\r\n<asp:DropDownCheckBoxes ID=\"ddlCatagory_\" runat=\"server\" AddJQueryReference=\"True\" UseButtons=\"True\" UseSelectAllNode=\"True\" AutoPostBack=\"false\">\r\n</asp:DropDownCheckBoxes>\r\n\r\n.CS\r\n\r\npublic void BindAccountCatagory()\r\n    {\r\n        DataTable ds = AS_Accounts.GetAccountCatagory();\r\n        for (int i = 0; i < ds.Rows.Count; i++)\r\n        {\r\n            System.Web.UI.WebControls.ListItem item = new System.Web.UI.WebControls.ListItem(ds.Rows[i][0].ToString(), ds.Rows[i][1].ToString());\r\n            ddlCatagory.Items.Insert(i, item);\r\n            ddlCatagory_.Items.Insert(i, item);\r\n        }\r\n        ddlCatagory.Items.Insert(0, \"-ALL-\");\r\n        ddlCatagory.DataBind();\r\n\r\n        ddlCatagory_.DataSource = ds;\r\n        ddlCatagory_.DataBind();\r\n    }\r\n\r\nBindAccountCatagory() is being called on the pageload. ddlCatagory is a simple dropdown to which data is getting binded however ddlCatagory_ is the drop down check box to which data is not getting binded.\r\n\r\nPlease help.\r\n\r\nThanks,\r\nAnirban",
+    "LastUpdatedDate": "2014-07-17T03:44:48.113-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "DropDownCheckBoxes",
+    "ReportedDate": "2014-07-17T03:44:48.113-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Databinding using Dataset",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 19
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

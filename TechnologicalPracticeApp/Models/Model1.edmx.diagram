@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a89a715d59c449018eba79b6bcecbb27" Name="Diagram1" ZoomLevel="63" >
+        <EntityTypeShape EntityType="Model1.Ecolabel" Width="1.5" PointX="6.375" PointY="4.625" />
+        <EntityTypeShape EntityType="Model1.Company" Width="1.5" PointX="3.5" PointY="4.5" />
+        <EntityTypeShape EntityType="Model1.Country" Width="1.5" PointX="10" PointY="2" />
+        <EntityTypeShape EntityType="Model1.Country_Ecolabel" Width="1.5" PointX="7.625" PointY="2" />
+        <EntityTypeShape EntityType="Model1.EcoType" Width="1.5" PointX="3" PointY="1.75" />
+        <EntityTypeShape EntityType="Model1.EcoType_Ecolabel" Width="1.5" PointX="5.25" PointY="2" />
+        <EntityTypeShape EntityType="Model1.Demand" Width="1.5" PointX="2.125" PointY="7.375" />
+        <EntityTypeShape EntityType="Model1.Demand_Ecolabel" Width="1.5" PointX="4.125" PointY="7.375" />
+        <EntityTypeShape EntityType="Model1.PersonalCabinet" Width="1.5" PointX="9.5" PointY="4.5" />
+        <EntityTypeShape EntityType="Model1.Person" Width="1.5" PointX="9.375" PointY="7.5" />
+        <EntityTypeShape EntityType="Model1.AccessLevel" Width="1.5" PointX="11.875" PointY="7.5" />
+        <AssociationConnector Association="Model1.CompanyEcolabel" />
+        <AssociationConnector Association="Model1.EcolabelCountry_Ecolabel" />
+        <AssociationConnector Association="Model1.EcolabelDemand_Ecolabel" />
+        <AssociationConnector Association="Model1.EcolabelPersonalCabinet" />
+        <AssociationConnector Association="Model1.EcolabelEcoType_Ecolabel" />
+        <AssociationConnector Association="Model1.CountryCountry_Ecolabel" />
+        <AssociationConnector Association="Model1.EcoTypeEcoType_Ecolabel" />
+        <AssociationConnector Association="Model1.DemandDemand_Ecolabel" />
+        <AssociationConnector Association="Model1.PersonPersonalCabinet" />
+        <AssociationConnector Association="Model1.AccessLevelPerson" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

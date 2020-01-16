@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1060441",
+    "ThreadId": "448066",
+    "Html": "Is there any built-in javascript/jquery function to add items in this control?\r<br />\nWell..of course, I could figure out how the html is generated, then create a function to add item based on this generated html information, but just would like to check whether there is any built-in function does add item using javascript/jquery.\r<br />\n<br />\nThanks,<br />\n",
+    "PostedDate": "2013-06-24T08:42:02.343-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]
